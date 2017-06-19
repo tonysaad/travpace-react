@@ -1,0 +1,146 @@
+/* reset */
+
+
+/**/
+
+html,
+body,
+iframe,
+header,
+footer,
+main,
+aside,
+nav,
+section,
+article,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+hr,
+blockquote,
+pre,
+a,
+address,
+del,
+em,
+i,
+strong,
+sub,
+sup,
+figure,
+figcaption,
+img,
+form,
+fieldset,
+legend,
+label,
+input,
+select,
+textarea,
+button,
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td {
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: none;
+    font-size: 100%;
+    font: inherit;
+    text-decoration: none;
+}
+
+html,
+body,
+iframe,
+header,
+footer,
+main,
+aside,
+nav,
+section,
+article,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+hr,
+blockqoute,
+pre,
+figure,
+figcaption,
+form,
+fieldset,
+legend,
+label,
+input,
+select,
+textarea,
+button {
+    display: block;
+}
+
+html,
+body {
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+dl,
+dt,
+dd,
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}

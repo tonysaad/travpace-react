@@ -1,0 +1,78 @@
+.agency-details-div {}
+
+.agency-details-div>p {
+    font-size: 12px;
+    color: #000000;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+
+.agency-details-div .agency-details {
+    font-size: 0;
+}
+
+.agency-details-div .agency-details .pic {
+    display: inline-block;
+    vertical-align: top;
+    background: #FFFFFF;
+    border: 1px solid #DCDEE0;
+    border-radius: 2px;
+    width: 88px;
+    height: 66px;
+    text-align: center;
+}
+
+.agency-details-div .agency-details .pic img {
+    max-height: 100%;
+}
+
+.agency-details-div .agency-details .details {
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 8px;
+    margin-top: -4px;
+}
+
+.agency-details-div .agency-details .details h4 {
+    font-size: 13px;
+    color: #000000;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.agency-details-div .agency-details .details p.premium-agency {
+    font-size: 12px;
+    color: #1B5EC9;
+    letter-spacing: 0.2px;
+    font-weight: 700;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding: 0 16px 0 0;
+    background-position: right center;
+    line-height: 22px;
+    font-style: italic;
+    background-image: url(../img/icons/check-circle.png);
+    background-repeat: no-repeat;
+    background-size: 13px;
+}
+
+.agency-details-div .agency-details .details p.tel {
+    /* font-family: 'Open Sans Condensed', sans-serif; */
+    direction: ltr;
+    text-align: right;
+    font-size: 13px;
+}
+
+.agency-details-div .agency-details .details p.mail {
+    font-size: 12px;
+    color: #000000;
+    line-height: 18px;
+    /* font-family: 'Open Sans Condensed', sans-serif; */
+    /* direction: ltr; */
+    /* text-align: right; */
+}
+
+.agency-details-div .agency-details .details p.address {
+    font-size: 12px;
+    color: #000000;
+    line-height: 18px;
+}

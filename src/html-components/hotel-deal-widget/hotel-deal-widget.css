@@ -1,0 +1,288 @@
+.default-widget {
+    background: #FFFFFF;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.10);
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    border-radius: 4px;
+    position: relative;
+}
+
+.default-widget .pic {
+    padding-top: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+}
+
+.default-widget .widget-hotel-content {
+    padding: 10px 20px;
+    font-size: 0;
+}
+
+.default-widget .widget-hotel-content h2 {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.default-widget .widget-hotel-content h2 .starts {
+    display: inline-block;
+    vertical-align: middle;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.default-widget .widget-hotel-content .premium-icon {
+    font-size: 12px;
+    display: table;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.hotel-label {
+    border-radius: 2px;
+    font-size: 10px;
+    color: #FFFFFF;
+    line-height: 22px;
+    font-weight: 700;
+    padding: 0 5px;
+    background: #1FCAA0;
+}
+
+.hotel-label+.hotel-label {
+    margin-right: 4px;
+}
+
+.default-widget .hotel-label {}
+
+.hotel-label.green-label {
+    background: #1FCAA0;
+}
+
+.hotel-label.red-label {
+    background: #ED145B;
+}
+
+.widget-hotel-foot {
+    border-top: 1px solid #E5EBF1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+    padding: 0px 20px 5px;
+    border-radius: 0 0 4px 4px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.widget-hotel-foot .price {}
+
+.widget-hotel-foot .price>span {
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 14px;
+}
+
+.widget-hotel-foot .price h3 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 24px;
+    margin-bottom: 0px;
+    margin-top: -5px;
+    display: table;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.widget-hotel-foot .price>p {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.widget-hotel-foot .fav-btn {
+    margin-top: 5px;
+}
+
+.travel-package .price h3 span {
+    font-size: 10px;
+    font-weight: 400;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.visibility-watch {
+    font-size: 10px;
+    color: #798694;
+    text-align: left;
+    padding: 10px 20px;
+    line-height: 22px;
+    border-top: 1px solid #E5EBF1;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25);
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    border-radius: 0 0 4px 4px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.visibility-watch img {
+    width: 17px;
+    vertical-align: middle;
+}
+
+.visibility-watch .num {
+    font-size: 11px;
+    vertical-align: middle;
+}
+
+.default-widget:hover .visibility-watch {
+    opacity: 1;
+    visibility: visible;
+}
+
+.default-widget:hover .widget-hotel-foot {
+    border-radius: 0;
+}
+
+.default-widget:hover {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 4px 4px 0 0;
+}
+
+.default-widget.waiting {}
+
+.default-widget.waiting .pic {
+    background-color: #E5EBF1;
+    background-image: none !important;
+    overflow: hidden;
+}
+
+.default-widget.waiting .pic:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-image: url(../img/icons/loading-data.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: spin 2s linear infinite;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    margin-top: -8px;
+    margin-left: -8px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.default-widget.waiting .widget-hotel-content h2 {
+    position: relative;
+}
+
+.default-widget.waiting .widget-hotel-content h2:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.default-widget.waiting .widget-hotel-content h2:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 15px;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: placeHolderShimmer;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    z-index: 2;
+}
+
+@keyframes placeHolderShimmer {
+    0% {
+        background-position: 468px 0
+    }
+    100% {
+        background-position: -468px 0
+    }
+}
+
+.default-widget.waiting .widget-hotel-content h2+p {
+    position: relative;
+}
+
+.default-widget.waiting .widget-hotel-content h2+p:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.default-widget.waiting .widget-hotel-content h2+p:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 10px;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: placeHolderP;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    z-index: 2;
+}
+
+@keyframes placeHolderP {
+    0% {
+        background-position: 468px 0
+    }
+    100% {
+        background-position: -468px 0
+    }
+}
+
+.default-widget.waiting .widget-hotel-foot,
+.default-widget.waiting .hotel-label,
+.default-widget.waiting .travel-included,
+.default-widget.waiting .visibility-watch {
+    opacity: 0;
+    visibility: visible;
+    pointer-events: none;
+}

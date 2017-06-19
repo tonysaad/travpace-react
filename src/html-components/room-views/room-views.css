@@ -1,0 +1,80 @@
+.room-views {
+    font-size: 0;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 13px 0;
+}
+
+.room-views .select-sec {
+    margin-bottom: 10px;
+}
+
+.room-views .select-sec select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 12px;
+    color: #000000;
+    line-height: 26px;
+    background: #F0F1F2;
+    border: 1px solid #C1C9D2;
+    border-radius: 4px;
+    padding: 0 9px;
+    width: 100%;
+    background-image: url(../img/icons/arrow-down.png), url(../img/icons/line.png);
+    background-repeat: no-repeat;
+    background-position: 8px center, 22px center;
+    cursor: pointer;
+    background-size: 10px, 1px 16px;
+}
+
+.room-views .select-sec select:before {
+    content: '';
+}
+
+.room-views li {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #DCDEE0;
+    padding: 10px 0;
+}
+
+.room-views li:first-child {
+    border: none;
+}
+
+.room-views li .room-type {}
+
+.room-views li .room-type img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.room-views li .room-type div {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 15px;
+}
+
+.room-views li .room-type h5 {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: -4px;
+}
+
+.room-views li .room-type p {
+    font-size: 12px;
+}
+
+.room-views li .price {}
+
+.room-views li .price span {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.room-views li .price h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+}

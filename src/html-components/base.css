@@ -1,0 +1,240 @@
+body {
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+}
+
+span {
+    font-family: 'Cairo', sans-serif;
+}
+
+.premium-icon {
+    background-image: url(img/icons/check-circle.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 13px;
+    padding-left: 17px;
+}
+
+
+/*starts*/
+
+.starts {
+    height: 26px;
+    font-size: 0;
+}
+
+.starts i {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-image: url(img/icons/star.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    margin-left: 3px;
+}
+
+.starts.starts-one i:nth-child(1)~i,
+.starts.starts-two i:nth-child(2)~i,
+.starts.starts-three i:nth-child(3)~i,
+.starts.starts-four i:nth-child(4)~i {
+    background-image: url(img/icons/star-empty.png);
+}
+
+
+/*crowns*/
+
+.crowns {
+    position: relative;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.crowns i {
+    width: 12px;
+    height: 8px;
+    display: inline-block;
+    background-image: url(img/icons/crown.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+.crowns.crowns-special i:nth-child(2)~i,
+.crowns.crowns-economic i:nth-child(1)~i {
+    background-image: url(img/icons/crown-empty.png);
+}
+
+.crowns .hint {
+    position: relative;
+    font-size: 10px;
+    background: #F5A623;
+    border-radius: 2px;
+    color: #403322;
+    position: absolute;
+    padding: 0px 10px;
+    bottom: 100%;
+    right: -5px;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    margin-bottom: -2px;
+    font-weight: 600;
+}
+
+.crowns .hint:before {
+    top: 100%;
+    right: 6px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: #F5A623;
+    border-width: 5px;
+}
+
+.crowns:hover .hint {
+    opacity: 1;
+    margin-bottom: 0;
+}
+
+.crowns.crowns-luxury .hint {
+    min-width: 67px;
+}
+
+.crowns.crowns-special .hint {
+    width: 74px;
+}
+
+.crowns.crowns-economic .hint {
+    width: 81px;
+}
+
+.hot-deal {
+    background-image: url(img/icons/hot-deal.png);
+    background-size: 14px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 22px;
+}
+
+
+/*Fav Btn*/
+
+.fav-btn {
+    /* opacity: 0.5; */
+    background: rgba(193, 201, 210, 0.5);
+    border-radius: 4px;
+    width: 60px;
+    line-height: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+
+.fav-btn span {
+    font-size: 15px;
+    font-weight: 900;
+    padding-right: 3px;
+    /* font-family: 'Open Sans Condensed', sans-serif; */
+    line-height: 20px;
+}
+
+.fav-btn .fav-icon {
+    background-image: url('img/icons/favorite-lines.png');
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fav-btn:hover,
+.fav-btn.clicked {
+    background-color: #EA0E4D;
+}
+
+.fav-btn.clicked .fav-icon {
+    background-image: url('img/icons/favorite-solid.png');
+}
+
+
+/*Sale Widget*/
+
+.sale-widget {
+    display: inline-block;
+    font-family: 'Cairo', sans-serif;
+    margin-top: -15px;
+}
+
+.sale-widget img {
+    display: inline-block;
+    width: 18px;
+}
+
+.sale-widget div {
+    display: inline-block;
+}
+
+.sale-widget div span {
+    color: #EA0E4D;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 300;
+}
+
+.sale-widget div p {
+    font-size: 11px;
+    color: #EA0E4D;
+    line-height: 16px;
+    font-weight: 700;
+}
+
+.sale-widget div p del {
+    font-size: 16px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-decoration: line-through;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+
+/*travel-included*/
+
+.travel-included {
+    margin-top: 10px;
+}
+
+.travel-included li {
+    font-size: 13px;
+    padding-right: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+    font-weight: 400;
+}
+
+.travel-included .days {
+    background-image: url(img/icons/day.png);
+    background-size: 18px auto;
+}
+
+.travel-included .breakfast-dinner {
+    background-image: url(img/icons/dinner.png);
+    background-size: 26px auto;
+}

@@ -1,0 +1,73 @@
+.program-div {
+    font-size: 0;
+}
+
+.program-div h4 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.program-div li {
+    counter-increment: item;
+    position: relative;
+    border-top: 1px solid #DCDEE0;
+    padding: 20px 65px 20px 20px;
+}
+
+.program-div li:first-child {
+    border-top: none;
+}
+
+.program-div li::before {
+    content: counter(item);
+    position: absolute;
+    right: 15px;
+    color: #C1C9D2;
+    font-size: 33px;
+    font-weight: 700;
+    top: 50px;
+    line-height: 26px;
+}
+
+.program-div h3 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.program-div p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    max-width: 380px;
+}
+
+.program-div .extra {
+    margin-top: 10px;
+}
+
+.program-div .extra a {
+    color: #EA0E4D;
+    font-size: 12px;
+    position: relative;
+    margin-right: 50px;
+}
+
+.program-div .extra a:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #EA0E4D;
+    bottom: 3px;
+}
+
+.program-div .extra p {
+    color: #798694;
+    background-image: url(../img/icons/camp.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 15px) center;
+    background-size: 26px;
+    padding-right: 50px;
+    line-height: 26px;
+}
