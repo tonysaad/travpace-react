@@ -1,0 +1,26 @@
+.book-num-div {
+    background: rgba(0, 166, 81, 0.09);
+    border: 1px solid #00A651;
+    border-radius: 4px;
+    color: #000000;
+    padding: 10px;
+}
+
+.book-num-div p {
+    font-size: 12px;
+    font-weight: 600;
+    background-image: url('/img/icons/phone.png');
+    background-repeat: no-repeat;
+    background-size: 13px;
+    background-position: right center;
+    padding-right: 20px;
+}
+
+.book-num-div a {
+    color: #000;
+    direction: ltr;
+    font-family: 'Open Sans Condensed', sans-serif;
+    display: inline-block;
+    font-weight: 800;
+    font-size: 24px;
+}

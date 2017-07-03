@@ -1,0 +1,11 @@
+.travel-dates-div { font-size: 0; } 
+.travel-dates-div h4 { font-size: 14px; color: #000000; line-height: 1.2; font-weight: 700; margin-bottom: 15px; } 
+.travel-dates-div table { text-align: right; } 
+.travel-dates-div table thead tr th { color: #4A4A4A; font-size: 12px; font-weight: 400; padding-bottom: 5px; } 
+.travel-dates-div table tbody tr td { border-top: 1px solid #DCDEE0; padding: 7px 0; line-height: 1.2; font-size: 12px; color: #000; text-align: right; } 
+.travel-dates-div table tbody tr:first-child td { border-top: none; } 
+.travel-dates-div table tbody td.date { color: #4A4A4A; font-size: 12px; font-weight: 400;width: 200px;}
+.travel-dates-div table tbody td.price { font-weight: 700; direction: ltr; } 
+.travel-dates-div table tbody td.availability { font-size: 10px; color: #00A651; font-weight: 900; text-align: left; } 
+.travel-dates-div table tbody td.availability.unavailable { color: #8698A9; } 
+.travel-dates-div .btn { background: #00A651; border-radius: 4px; display: block; width: 100%; font-size: 18px; color: #FFFFFF; font-weight: 600; line-height: 60px; text-align: center; margin-top: 16px; } 

@@ -1,0 +1,7 @@
+.pagination { font-size: 0; text-align: left; } 
+.pagination li { display: inline-block; font-size: 18px; width: 60px; background: rgba(193, 201, 210, 0.5); border-radius: 4px; text-align: center; line-height: 43px; color: #fff; margin-right: 10px; height: 43px; vertical-align: middle; -webkit-transition: all .2s; -moz-transition: all .2s; -o-transition: all .2s; transition: all .2s; } 
+.pagination li a { display: block; width: 100%; height: 100%; color: inherit; text-decoration: none; } 
+.pagination li:hover,.pagination li.active { background: #1B5EC9; } 
+.pagination li.btn { background-image: url('/img/icons/arrow-right-grey.png'); background-position: center; background-size: 9px; background-repeat: no-repeat; } 
+.pagination li.btn.pagination-prev { -moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); } 
+.pagination li.btn:hover { background-image: url('/img/icons/arrow-right-white.png'); } 
