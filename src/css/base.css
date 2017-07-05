@@ -47,11 +47,11 @@ span { font-family: 'Cairo', sans-serif; }
 
 /*basics*/
 .hot-deal { background-image: url('/img/icons/hot-deal.png'); background-size: 14px; background-position: left center; background-repeat: no-repeat; padding-left: 22px; } 
-.container { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: flex; -webkit-flex-flow: row wrap; flex-flow: row wrap; padding: 0 20px; } 
-.container .right-side { flex-basis: 250px; flex-grow: 0; flex-shrink: 1; } 
-.container .left-side { flex-grow: 1; flex-shrink: 1; flex-basis: calc(100% - 250px); padding:20px 30px 0; margin-bottom: 50px; } 
-.container .list-view { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-flow: row wrap; flex-flow: row wrap; margin: 0 -15px; } 
-.container .list-view .col { flex-grow: 1; flex-shrink: 1; flex-basis: 25%; padding: 0 15px; margin-bottom: 60px; max-width: 25%; } 
+.HomePage .container { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: flex; -webkit-flex-flow: row wrap; flex-flow: row wrap; padding: 0 20px; } 
+.HomePage .container .right-side { flex-basis: 250px; flex-grow: 0; flex-shrink: 1; } 
+.HomePage .container .left-side { flex-grow: 1; flex-shrink: 1; flex-basis: calc(100% - 250px); padding:20px 30px 0; margin-bottom: 50px; } 
+.HomePage .container .list-view { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-flow: row wrap; flex-flow: row wrap; margin: 0 -15px; } 
+.HomePage .container .list-view .col { flex-grow: 1; flex-shrink: 1; flex-basis: 25%; padding: 0 15px; margin-bottom: 60px; max-width: 25%; } 
 
 /*Right Sponsored*/
 .sponsored { font-size: 0; margin-bottom: 30px; } 

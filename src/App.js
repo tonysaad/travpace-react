@@ -5,7 +5,7 @@ import TravelIncluded from './components/TravelIncluded';
 import Header from './components/Header';
 import Filter from './components/Filter';
 import TitleCity from './components/TitleCity';
-import TripWidget from './components/TripWidget';
+import ListView from './components/ListView';
 import Pagination from './components/Pagination';
 import Starts from './components/Starts';
 import FavBtn from './components/FavBtn';
@@ -14,6 +14,8 @@ import UsersWatch from './components/UsersWatch';
 import Label from './components/Label';
 import ListPrices from './components/ListPrices';
 import TravelDates from './components/TravelDates';
+import Book from './components/booking-page/Book';
+import Thanks from './components/thanks-page/Thanks';
 import Carousel from 'react-image-carousel';
 // import ReactModal from 'react-modal';
 import './css/reset.css';
@@ -33,6 +35,7 @@ let images = [
 	'http://via.placeholder.com/350x150',
 ];
 
+
 const App = () => (
 
 
@@ -41,45 +44,31 @@ const App = () => (
       <Header/>
       <Route exact path="/" component={Home}/>
       <Route path="/single" component={Single}/>
-      <Route path="/topics" component={Topics}/>
+      <Route path="/book" component={BookNow}/>
+      <Route path="/thanks" component={ThanksPage}/>
     </div>
   </Router>
 )
 
 const Home = () => (
-  <div className="container">
-    <div className="right-side">
-      <div className="sponsored">
+  <div className="HomePage">
+    <div className="container">
+      <div className="right-side">
+        <div className="sponsored">
+          <span>برعاية</span>
+          <img src="/img/right-sponsored.png" alt="sponsored"/>
+        </div>
+        <Filter/>
+      </div>
+      <div className="left-side">
+        <TitleCity/>
+        <ListView/>
+        <Pagination/>
+      </div>
+      <div className="sponsored middle">
         <span>برعاية</span>
-        <img src="/img/right-sponsored.png" alt="sponsored"/>
+        <img src="/img/middle-sponsored.png" alt="sponsored"/>
       </div>
-      <Filter/>
-    </div>
-    <div className="left-side">
-      <TitleCity/>
-      <div className="list-view">
-        <TripWidget/>
-        <TripWidget/>
-        <TripWidget/>
-        <TripWidget/>
-        <TripWidget/>
-        <TripWidget/>
-        <TripWidget/>
-        <TripWidget/>
-        <TripWidget/>
-        <TripWidget/>
-        <TripWidget/>
-        <TripWidget/>
-        <TripWidget/>
-        <TripWidget/>
-        <TripWidget/>
-        <TripWidget/>
-      </div>
-      <Pagination/>
-    </div>
-    <div className="sponsored middle">
-      <span>برعاية</span>
-      <img src="/img/middle-sponsored.png" alt="sponsored"/>
     </div>
   </div>
 )
@@ -186,38 +175,14 @@ const Single = () => (
   </div>
 )
 
-const Topics = ({ match }) => (
-  <div>
-    <h2>Topics</h2>
-    <ul>
-      <li>
-        <Link to={`${match.url}/rendering`}>
-          Rendering with React
-        </Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/components`}>
-          Components
-        </Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/props-v-state`}>
-          Props v. State
-        </Link>
-      </li>
-    </ul>
 
-    <Route path={`${match.url}/:topicId`} component={Topic}/>
-    <Route exact path={match.url} render={() => (
-      <h3>Please select a topic.</h3>
-    )}/>
-  </div>
+const BookNow = () => (
+  <Book/>
 )
 
-const Topic = ({ match }) => (
-  <div>
-    <h3>{match.params.topicId}</h3>
-  </div>
+
+const ThanksPage = () => (
+  <Thanks/>
 )
 
 export default App
