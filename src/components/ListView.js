@@ -15,10 +15,9 @@ class ListView extends Component {
     this.state={
       list:[]
     }
-    this.url = "http://localhost/mitchdesigns/travpace/wp-json/v1/hotel-deals-and-packages";
+    this.url = "https://gist.githubusercontent.com/omaressameldin/3572988c55805f1f71d06afd2b5b4589/raw/17327a7ba93acfb3a43e165642b917fc2da11b87/travpace.json";
   }
     updateState = (list) => {
-        console.log(list);
         this.setState({list:list});
     }
   componentDidMount(){
@@ -31,15 +30,14 @@ class ListView extends Component {
     });
     axios.get(tempURL).then((response) => {
       if(response.data.status == "success"){
-        console.log("hena");
         this.updateState(response.data.data);
       }
     });
   }
   render() {
-    let list = this.state.list.map((item)=>{
+    let list = this.state.list.map((item, i)=>{
         return(
-        <TripWidget/>
+        <TripWidget key = {i}/>
         )
     });
     return(
