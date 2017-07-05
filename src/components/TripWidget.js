@@ -14,7 +14,12 @@ var TripImg = {
 };
 
 class TripWidget extends Component {
+    constructor(props){
+        super(props);
+
+    }
   render() {
+      let rating = (this.props.info.type == "hotel-deal")? (<Starts/>) : (<Starts/>);
     return (
 <div className="col">
     <Link to="/single" className="default-widget hotel-deal">
@@ -22,22 +27,22 @@ class TripWidget extends Component {
 
         </div>
         <div className="widget-hotel-content">
-            <h2>فندق خليج نعمة شرم الشيخ
+            <h2>{this.props.info.title}
                 <Starts/>
             </h2>
-            <p className="premium-icon">عرض من شركة توريكو للسياحة</p>
+            <p className="premium-icon">{"عرض من شركة "+this.props.info.agency.name}</p>
             <Label/>
             <TravelIncluded/>
         </div>
         <div className="widget-hotel-foot">
             <div className="price">
                 <span>جنيه</span>
-                <h3 className="hot-deal">3,456
+                <h3 className="hot-deal">{this.props.info.discount}
                     <div className="sale-widget">
                         <img src="/img/icons/percentage.png" alt="percentage"/>
                         <div>
-                            <span>خصم ٢٥٪</span>
-                            <p><del>1,400</del>جنيه</p>
+                            <span>خصم{Math.round(this.props.info.doublePrice/this.props.info.discount * 1000)/10}%</span>
+                            <p><del>{this.props.info.doublePrice}</del>جنيه</p>
                         </div>
                     </div>
                 </h3>

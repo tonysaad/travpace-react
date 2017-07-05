@@ -37,7 +37,7 @@ class ListView extends Component {
   render() {
     let list = this.state.list.map((item, i)=>{
         return(
-        <TripWidget key = {i}/>
+        <TripWidget info= {item} key = {i}/>
         )
     });
     return(
