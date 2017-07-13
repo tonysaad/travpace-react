@@ -15,7 +15,7 @@ class ListView extends Component {
     this.state={
       list:[]
     }
-    this.url = "https://gist.githubusercontent.com/omaressameldin/3572988c55805f1f71d06afd2b5b4589/raw/17327a7ba93acfb3a43e165642b917fc2da11b87/travpace.json";
+    this.url = "http://localhost:4321/deals-and-packages?_page=1&_limit=16";
   }
     updateState = (list) => {
         this.setState({list:list});
@@ -29,9 +29,8 @@ class ListView extends Component {
       tempURL += (i == 0)? "?"+filter : "&"+filter;
     });
     axios.get(tempURL).then((response) => {
-      if(response.data.status == "success"){
-        this.updateState(response.data.data);
-      }
+        this.updateState(response.data);
+      
     });
   }
   render() {

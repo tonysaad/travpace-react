@@ -63,14 +63,14 @@ class Header extends Component {
             </div>
             <form className="search-sec">
                 <div className="select-sec">
-                    <label for="destination">الوجهة السياحية</label>
+                    <label htmlFor="destination">الوجهة السياحية</label>
                     <select name="destination">
                         <option value="1">شرم الشيخ</option>
                         <option value="2">الغردقه</option>
                     </select>
                 </div>
                 <div className="select-sec">
-                    <label for="month">الشهر المفضل للسفر</label>
+                    <label htmlFor="month">الشهر المفضل للسفر</label>
                     <select name="month">
                         <option value="1">يناير ٢٠١٧</option>
                         <option value="2">فبراير ٢٠١٧</option>

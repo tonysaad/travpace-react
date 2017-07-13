@@ -5,10 +5,10 @@ span { font-family: 'Cairo', sans-serif; }
 /*starts*/
 .starts { height: 26px; font-size: 0; } 
 .starts i { width: 16px; height: 16px; display: inline-block; background-image: url('/img/icons/star.png'); background-size: cover; background-repeat: no-repeat; background-position: center; vertical-align: middle; margin-left: 3px; } 
-.starts.starts-one i:nth-child(1)~i,
-.starts.starts-two i:nth-child(2)~i,
-.starts.starts-three i:nth-child(3)~i,
-.starts.starts-four i:nth-child(4)~i { background-image: url('/img/icons/star-empty.png'); } 
+.starts.starts-1 i:nth-child(1)~i,
+.starts.starts-2 i:nth-child(2)~i,
+.starts.starts-3 i:nth-child(3)~i,
+.starts.starts-4 i:nth-child(4)~i { background-image: url('/img/icons/star-empty.png'); } 
 
 
 /*crowns*/
