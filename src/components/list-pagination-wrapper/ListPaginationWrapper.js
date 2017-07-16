@@ -4,9 +4,10 @@ import ListView from '../ListView';
 import Pagination from '../Pagination';
 import TitleCity from '../TitleCity';
 import SingleItem from '../single-item/SingleItem';
+
 class ListPaginationWrapper extends Component {
-  constructor() {
-      super();
+  constructor(props) {
+      super(props);
     this.state = {
       list: [],
       filters:  {"_page":1, "_limit": 16},
@@ -20,11 +21,15 @@ class ListPaginationWrapper extends Component {
     this.setState({ list, filters, totalCount  });
   };
   changePage = (page) =>{
-    console.log(page)
     this.getList({"_page":page});
   }
 
   populateAndTogglePopup = (popupToggle, popupData = '') =>{
+    console.log(popupData);
+    if(popupToggle === true)
+      this.props.history.push("/"+popupData.id);
+    else
+      this.props.history.goBack();
     this.setState({popupToggle, popupData})
   }
 
@@ -42,13 +47,12 @@ class ListPaginationWrapper extends Component {
       tempURL += i == 0 ? "?" + filter : "&" + filter;
     });
     axios.get(tempURL).then(response => { 
-      console.log(response);
       this.updateState(response.data, allFilters, response.headers["x-total-count"]);
     });
   };
 
   render(){
-    let popup = (this.state.popupToggle)? (<SingleItem popupFunction = {this.populateAndTogglePopup} />) : '';
+    let popup = (this.state.popupToggle)? (<SingleItem info = {this.state.popupData} popupFunction = {this.populateAndTogglePopup} />) : '';
     return(    
       <div className="left-side">
         <TitleCity/>

@@ -23,7 +23,7 @@ import {
   Route,
   Link
 } from 'react-router-dom'
-
+import history from './history'
 let images = [
 	'http://via.placeholder.com/350x150',
 	'http://via.placeholder.com/350x150',
@@ -58,7 +58,7 @@ const Home = () => (
         </div>
         <Filter/>
       </div>
-      <ListPaginationWrapper />
+      <ListPaginationWrapper history={history} />
       <div className="sponsored middle">
         <span>برعاية</span>
         <img src="/img/middle-sponsored.png" alt="sponsored"/>

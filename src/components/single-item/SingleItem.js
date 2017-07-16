@@ -17,6 +17,10 @@ let images = [
 	'http://via.placeholder.com/350x150',
 ];
 class SingleItem extends Component {
+    constructor(props){
+        super(props);
+        console.log(this.props.info);
+    }
     render() {
         return (
             <div className="quick-view">
