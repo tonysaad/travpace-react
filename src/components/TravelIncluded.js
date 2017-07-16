@@ -16,7 +16,7 @@ class TravelIncluded extends Component {
     return (
         <ul className="travel-included">
           <li className="days">{this.props.days} أيام</li>
-          <li className="breakfast-dinner">{this.mealPlan(this.props.mealPlan)}</li>
+          {/* <li className="breakfast-dinner">{this.mealPlan(this.props.mealPlan)}</li> */}
         </ul>
     );
   }

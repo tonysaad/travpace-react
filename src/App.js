@@ -3,10 +3,8 @@ import AgencyDetails from './components/AgencyDetails';
 import BookNum from './components/BookNum';
 import TravelIncluded from './components/TravelIncluded';
 import Header from './components/Header';
+import ListPaginationWrapper from './components/list-pagination-wrapper/ListPaginationWrapper';
 import Filter from './components/Filter';
-import TitleCity from './components/TitleCity';
-import ListView from './components/ListView';
-import Pagination from './components/Pagination';
 import Starts from './components/Starts';
 import FavBtn from './components/FavBtn';
 import QRHeader from './components/QRHeader';
@@ -60,11 +58,7 @@ const Home = () => (
         </div>
         <Filter/>
       </div>
-      <div className="left-side">
-        <TitleCity/>
-        <ListView/>
-        <Pagination/>
-      </div>
+      <ListPaginationWrapper />
       <div className="sponsored middle">
         <span>برعاية</span>
         <img src="/img/middle-sponsored.png" alt="sponsored"/>
