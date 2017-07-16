@@ -75,7 +75,7 @@ span { font-family: 'Cairo', sans-serif; }
 .quick-view .arrow-switcher:hover{background-color:rgba(0, 0, 0, 0.8);}
 .quick-view .arrow-switcher.left { left: 0; } 
 .quick-view .arrow-switcher.right {transform: rotate(180deg); right: 0; } 
-.quick-view .close { height: 16px; width: 16px; position: relative; position: absolute; top: 24px; right: 24px; } 
+.quick-view .close { height: 16px; width: 16px; position: relative; position: absolute; top: 24px; right: 24px; cursor: pointer } 
 .quick-view .close::before { content:''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: #fff; transform: rotate(135deg); } 
 .quick-view .close::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: #fff; transform: rotate(-135deg); } 
 .quick-view .trip-content { display: flex; justify-content: space-between; } 

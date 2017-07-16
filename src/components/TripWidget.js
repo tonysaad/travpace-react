@@ -46,7 +46,7 @@ class TripWidget extends Component {
 }; 
     return (
 <div className="col">
-    <Link to="/single" className="default-widget hotel-deal">
+    <div onClick={()=>{this.props.popupFunction(true)}} className="default-widget hotel-deal">
         <div className="pic" style={TripImg}>
 
         </div>
@@ -64,7 +64,7 @@ class TripWidget extends Component {
             <span className="num">2398</span>
             <span>مشاهدة</span>
         </div>
-    </Link>
+    </div>
 </div>
     );
   }

@@ -1,4 +1,4 @@
-.default-widget { background: #FFFFFF; box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.10); -webkit-transition: all .2s; -moz-transition: all .2s; -o-transition: all .2s; transition: all .2s; border-radius: 4px; position: relative; display: block; color: #000; } 
+.default-widget {cursor: pointer; background: #FFFFFF; box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.10); -webkit-transition: all .2s; -moz-transition: all .2s; -o-transition: all .2s; transition: all .2s; border-radius: 4px; position: relative; display: block; color: #000; } 
 .default-widget .pic { padding-top: 75%; background-position: center; background-repeat: no-repeat; background-size: cover; border-radius: 4px 4px 0 0; position: relative; } 
 .default-widget .widget-hotel-content { padding: 10px 20px; font-size: 0; } 
 .default-widget .widget-hotel-content h2 { color: #000000; font-size: 16px; font-weight: 700; } 
