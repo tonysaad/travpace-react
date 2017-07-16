@@ -1,28 +1,22 @@
 import React, { Component } from 'react';
 import TripWidget from './TripWidget';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
-var list =[
-    <TripWidget/>,
-    <TripWidget/>,
-    <TripWidget/>,
-    <TripWidget/>,
-    <TripWidget/>,
-    <TripWidget/>,
-    <TripWidget/>,
-    <TripWidget/>,
-];
+
 
 class ListView extends Component {
+  constructor(props){
+    super(props);
+  }
   render() {
-    return (
-      <div className="list-view">
+    let list = this.props.list.map((item, i)=>{
+        return(
+        <TripWidget info= {item} key = {i}/>
+        )
+    });
+    return(
+      <div className='list-view'>
         {list}
       </div>
-    );
+    )
   }
 }
 
