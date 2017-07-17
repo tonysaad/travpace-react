@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import '../components/filter/filter.css';
 import {
-  BrowserRouter as Router,
-  Route,
-  Link
+//   BrowserRouter as Router,
+//   Route,
+//   Link
 } from 'react-router-dom'
 
 class Filter extends Component {

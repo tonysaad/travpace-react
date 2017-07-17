@@ -67,11 +67,14 @@ span { font-family: 'Cairo', sans-serif; }
 .hotel-label.red-label { background: #ED145B; } 
 
 /*Quick View*/
+.lamahom{ }
+.lamahom .item{ }
 .quick-view { position: fixed; background-color: rgba(0, 0, 0, 0.88); top: 0; right: 0; left: 0; bottom: 0; z-index: 1; overflow-x: hidden; overflow-y: auto; } 
+.quick-view .overlay{ }
 .quick-view .quick-view-items { margin: 55px auto 60px; max-width: 1200px; position: relative; } 
 .quick-view .quick-view-items > .item { background-color: #F4F4F4; padding: 35px 40px; max-width: 980px; margin: 0 auto; border-radius: 8px; } 
 .quick-view .head { } 
-.quick-view .arrow-switcher { background-color:rgba(0, 0, 0, 0.2); background-image: url('/img/icons/arrow-right-white.png'); background-position: center; border-radius: 4px; width: 80px; position: absolute; height: 335px; top: 115px; background-repeat: no-repeat; background-size: 14px; transition: all .2s; } 
+.quick-view .arrow-switcher { background-color:rgba(0, 0, 0, 0.2); background-image: url('/img/icons/arrow-right-white.png'); background-position: center; border-radius: 4px; width: 80px; position: absolute; height: 335px; top: 115px; background-repeat: no-repeat; background-size: 14px; transition: all .2s; cursor: pointer;} 
 .quick-view .arrow-switcher:hover { background-color:rgba(0, 0, 0, 0.8); } 
 .quick-view .arrow-switcher.left { left: 0; } 
 .quick-view .arrow-switcher.right { transform: rotate(180deg); right: 0; } 
@@ -137,3 +140,6 @@ span { font-family: 'Cairo', sans-serif; }
 .list-prices li .room-type p { font-size: 12px; } 
 .list-prices li .price span { font-size: 12px; font-weight: 600; } 
 .list-prices li .price h3 { font-size: 24px; font-weight: 700; line-height: 1; } 
+
+.no-scroll{overflow: hidden;}
+.trip-left-side .btn { background: #00A651; border-radius: 4px; display: block; width: 100%; font-size: 18px; color: #FFFFFF; font-weight: 600; line-height: 60px; text-align: center; margin-top: 16px; } 

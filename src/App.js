@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import AgencyDetails from './components/AgencyDetails';
 import BookNum from './components/BookNum';
 import TravelIncluded from './components/TravelIncluded';
 import Header from './components/Header';
 import ListPaginationWrapper from './components/list-pagination-wrapper/ListPaginationWrapper';
 import Filter from './components/Filter';
-import Starts from './components/Starts';
-import FavBtn from './components/FavBtn';
+// import Starts from './components/Starts';
+// import FavBtn from './components/FavBtn';
 import QRHeader from './components/QRHeader';
-import UsersWatch from './components/UsersWatch';
+// import UsersWatch from './components/UsersWatch';
 import Label from './components/Label';
 import ListPrices from './components/ListPrices';
 import TravelDates from './components/TravelDates';
@@ -41,9 +41,9 @@ const App = () => (
     <div>
       <Header/>
       <Route exact path="/" component={Home}/>
-      <Route path="/single" component={Single}/>
-      <Route path="/book" component={BookNow}/>
-      <Route path="/thanks" component={ThanksPage}/>
+      <Route exact path="/single" component={Single}/>
+      <Route exact path="/book/:id" component={(match) => <Book params={match.match.params}/>} />
+      <Route exact path="/thanks" component={Thanks}/>
     </div>
   </Router>
 )
@@ -103,7 +103,7 @@ const Single = () => (
                             <p>يقع الفندق فى وسط مدينة بيروت على بعد 50 متر من شارع الحمرا الشهير ,الفندق رائع من حيث الموقع فهو قريب من اماكن التسوق.</p>
                             <div className="extra">
                             <img src="img/icons/camp.png" alt=""/>
-                                <a href="#" target="_blank">المبيت في فندق ماريوت بيروت</a>
+                                <Link to="/" target="_blank">المبيت في فندق ماريوت بيروت</Link>
                             </div>
                         </li>
                         <li>
@@ -170,13 +170,5 @@ const Single = () => (
 )
 
 
-const BookNow = () => (
-  <Book/>
-)
-
-
-const ThanksPage = () => (
-  <Thanks/>
-)
 
 export default App

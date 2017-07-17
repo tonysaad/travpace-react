@@ -9,7 +9,7 @@ class ListView extends Component {
   render() {
     let list = this.props.list.map((item, i)=>{
         return(
-        <TripWidget popupFunction={this.props.popupFunction} info= {item} key = {i}/>
+        <TripWidget popupFunction={this.props.popupFunction} info= {item} key = {i} index={i}/>
         )
     });
     return(

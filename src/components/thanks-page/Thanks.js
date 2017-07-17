@@ -6,9 +6,9 @@ import AgentDetails from './AgentDetails';
 import TravelWay from './TravelWay';
 import Totals from './Totals';
 import {
-  BrowserRouter as Router,
-  Route,
-  Link
+  // BrowserRouter as Router,
+  // Route,
+  // Link
 } from 'react-router-dom'
 
 

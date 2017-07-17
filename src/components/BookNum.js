@@ -6,7 +6,7 @@ class BookNum extends Component {
     return (
         <div className="book-num-div">
             <p>الحجز متاح عن طريق التليفون</p>
-            <a href="tel:01276789887">01276789887</a>
+            <a href={"tel:" + this.props.phone}>{this.props.phone}</a>
         </div>
     );
   }

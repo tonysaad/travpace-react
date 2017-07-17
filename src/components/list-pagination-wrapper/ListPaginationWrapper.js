@@ -13,7 +13,8 @@ class ListPaginationWrapper extends Component {
       filters:  {"_page":1, "_limit": 16},
       totalCount:0,
       popupToggle: false,
-      popupData: ''
+      // popupData: '',
+      popupIndex:-1
     };
     this.url = "http://localhost:4321/deals-and-packages";
   }
@@ -23,14 +24,27 @@ class ListPaginationWrapper extends Component {
   changePage = (page) =>{
     this.getList({"_page":page});
   }
-
-  populateAndTogglePopup = (popupToggle, popupData = '') =>{
-    console.log(popupData);
+switchPopup=(direction) =>{
+  if (this.state.popupIndex +1 < this.state.list.length && direction === 'left') {
+    this.props.history.push("/"+this.state.list[this.state.popupIndex +1].id);
+    this.setState({ popupIndex: this.state.popupIndex +1})
+  }
+  if (this.state.popupIndex -1 >= 0 && direction === 'right') {
+    this.props.history.push("/"+this.state.list[this.state.popupIndex -1].id);
+    this.setState({ popupIndex: this.state.popupIndex -1})
+  }
+};
+  populateAndTogglePopup = (popupToggle, popupIndex = -1) =>{
+    // console.log(popupData);
+    console.log('popupIndex');
+    console.log(popupIndex);
+    document.body.classList.toggle('no-scroll', popupToggle)
     if(popupToggle === true)
-      this.props.history.push("/"+popupData.id);
-    else
+      this.props.history.push("/"+this.state.list[popupIndex].id);
+      
+      else
       this.props.history.goBack();
-    this.setState({popupToggle, popupData})
+    this.setState({popupToggle, popupIndex})
   }
 
     componentDidMount() {
@@ -44,7 +58,7 @@ class ListPaginationWrapper extends Component {
     let tempURL = this.url;
     Object.keys(allFilters).forEach((filterKey, i) => {
       let filter = filterKey+"="+allFilters[filterKey];
-      tempURL += i == 0 ? "?" + filter : "&" + filter;
+      tempURL += i === 0 ? "?" + filter : "&" + filter;
     });
     axios.get(tempURL).then(response => { 
       this.updateState(response.data, allFilters, response.headers["x-total-count"]);
@@ -52,7 +66,7 @@ class ListPaginationWrapper extends Component {
   };
 
   render(){
-    let popup = (this.state.popupToggle)? (<SingleItem info = {this.state.popupData} popupFunction = {this.populateAndTogglePopup} />) : '';
+    let popup = (this.state.popupToggle)? (<SingleItem info = {this.state.list[this.state.popupIndex]} popupFunction = {this.populateAndTogglePopup} switchPopup={this.switchPopup}/>) : '';
     return(    
       <div className="left-side">
         <TitleCity/>

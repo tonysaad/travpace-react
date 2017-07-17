@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './booking-page.css';
 import {
-  BrowserRouter as Router,
-  Route,
+  // BrowserRouter as Router,
+  // Route,
   Link
 } from 'react-router-dom'
 

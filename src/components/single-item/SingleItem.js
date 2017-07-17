@@ -7,29 +7,73 @@ import QRHeader from '../QRHeader';
 import Label from '../Label';
 import TravelDates from '../TravelDates';
 import AgencyDetails from '../AgencyDetails';
-import {Link} from 'react-router-dom';
-let images = [
-	'http://via.placeholder.com/350x150',
-	'http://via.placeholder.com/350x150',
-	'http://via.placeholder.com/350x150',
-	'http://via.placeholder.com/350x150',
-	'http://via.placeholder.com/350x150',
-	'http://via.placeholder.com/350x150',
-];
+import { Link } from 'react-router-dom';
+
 class SingleItem extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         console.log(this.props.info);
+
+    }
+    itenerary() {
+        return (
+            <div>
+                <div className="item">
+                    <div className="program-div">
+                        <h4>برامج الرحلة</h4>
+                        <ul>
+                            <li>
+                                <h3>أول يوم - وصول</h3>
+                                <p>يقع الفندق فى وسط مدينة بيروت على بعد 50 متر من شارع الحمرا الشهير ,الفندق رائع من حيث الموقع فهو قريب من اماكن التسوق.</p>
+                                <div className="extra">
+                                    <img src="img/icons/camp.png" alt="" />
+                                    <Link to="#" target="_blank">المبيت في فندق ماريوت بيروت</Link>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>أول يوم - وصول</h3>
+                                <p>يقع الفندق فى وسط مدينة بيروت على بعد 50 متر من شارع الحمرا الشهير ,الفندق رائع من حيث الموقع فهو قريب من اماكن التسوق.</p>
+                                <div className="extra">
+                                    <img src="img/icons/camp.png" alt="" />
+                                    <p>المبيت في كامب</p>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>أول يوم - وصول</h3>
+                                <p>يقع الفندق فى وسط مدينة بيروت على بعد 50 متر من شارع الحمرا الشهير ,الفندق رائع من حيث الموقع فهو قريب من اماكن التسوق.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="item">
+                    <div className="list-in-package-div">
+                        <h4>برامج الرحلة</h4>
+                        <ul>
+                            <li>يقع الفندق فى وسط مدينة بيروت على بعد 50 متر من شارع الحمرا الشهير</li>
+                            <li>الفندق رائع من حيث الموقع فهو قريب من اماكن التسوق</li>
+                            <li>مركز بيروت للفن و على بعد 10 دقائق من مطار رفيق الحريرى</li>
+                            <li>جمنازيوم مجهز تجهيزا جيدا، وساونا ومكتب الاستقبال يعمل على مدار 24 ساعة</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        )
     }
     render() {
+        let images = this.props.info.hotel.gallery.map((image, index) => {
+            return image.original;
+        })
+        let itenerary = (this.props.info.type == "hotel") ? '' : this.itenerary();
+        console.log("images");
+        console.log(images);
         return (
             <div className="quick-view">
-                <div onClick={()=>{this.props.popupFunction(false)}} className="close"></div>
+                <div onClick={() => { this.props.popupFunction(false) }} className="close"></div>
                 <div className="quick-view-items">
-                    <Link to="/" className="arrow-switcher left"></Link>
+                    <div onClick={() => { this.props.switchPopup('left') }} className="arrow-switcher left"></div>
                     <div className="item">
                         <div className="head">
-                            <QRHeader />
+                            <QRHeader info={this.props.info} />
                         </div>
                         <div className="trip-content">
                             <div className="trip-right-side">
@@ -46,53 +90,15 @@ class SingleItem extends Component {
 
                                 <div className="trip-data">
                                     <div className="item">
-                                        <p>يقع الفندق  فى وسط مدينة بيروت على بعد 50 متر من شارع الحمرا الشهير ,الفندق رائع من حيث الموقع فهو قريب من اماكن التسوق, مركز بيروت للفن و على بعد 10 دقائق من مطار رفيق الحريرى  ,ويضم جمنازيوم مجهز تجهيزا جيدا، وساونا ومكتب الاستقبال يعمل على مدار 24 ساعة. </p>
-                                        <p> كما يمكن للنزلاء الاستمتاع بالمأكولات اللبنانية الشهيرة في مطعم الفندق أو اكتشاف العديد من خيارات الطعام النموذجية ذات المستوى العالمي، على بعد خطوات من الفندق,كما يضم ساونا و مركز للياقة البدنية.</p>
+                                        <p>{this.props.info.hotel.description}</p>
                                     </div>
-                                    <div className="item">
-                                        <div className="program-div">
-                                            <h4>برامج الرحلة</h4>
-                                            <ul>
-                                                <li>
-                                                    <h3>أول يوم - وصول</h3>
-                                                    <p>يقع الفندق فى وسط مدينة بيروت على بعد 50 متر من شارع الحمرا الشهير ,الفندق رائع من حيث الموقع فهو قريب من اماكن التسوق.</p>
-                                                    <div className="extra">
-                                                        <img src="img/icons/camp.png" alt="" />
-                                                        <a href="#" target="_blank">المبيت في فندق ماريوت بيروت</a>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <h3>أول يوم - وصول</h3>
-                                                    <p>يقع الفندق فى وسط مدينة بيروت على بعد 50 متر من شارع الحمرا الشهير ,الفندق رائع من حيث الموقع فهو قريب من اماكن التسوق.</p>
-                                                    <div className="extra">
-                                                        <img src="img/icons/camp.png" alt="" />
-                                                        <p>المبيت في كامب</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <h3>أول يوم - وصول</h3>
-                                                    <p>يقع الفندق فى وسط مدينة بيروت على بعد 50 متر من شارع الحمرا الشهير ,الفندق رائع من حيث الموقع فهو قريب من اماكن التسوق.</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="item">
-                                        <div className="list-in-package-div">
-                                            <h4>برامج الرحلة</h4>
-                                            <ul>
-                                                <li>يقع الفندق فى وسط مدينة بيروت على بعد 50 متر من شارع الحمرا الشهير</li>
-                                                <li>الفندق رائع من حيث الموقع فهو قريب من اماكن التسوق</li>
-                                                <li>مركز بيروت للفن و على بعد 10 دقائق من مطار رفيق الحريرى</li>
-                                                <li>جمنازيوم مجهز تجهيزا جيدا، وساونا ومكتب الاستقبال يعمل على مدار 24 ساعة</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+
                                 </div>
 
                             </div>
                             <div className="trip-left-side">
-                                <BookNum />
-                                <TravelIncluded />
+                                <BookNum phone={this.props.info.agency.phone}/>
+                                <TravelIncluded days = {this.props.info.days} mealPlan = {this.props.info.mealPlan}/>
                                 <div className="list-prices">
                                     <div className="select-sec">
                                         <select name="room-views-month">
@@ -107,7 +113,8 @@ class SingleItem extends Component {
                                     </ul>
                                 </div>
                                 <TravelDates />
-                                <AgencyDetails />
+                                <Link to={"/book/"+this.props.info.id} className="btn">أحجز الآن</Link>
+                                <AgencyDetails agency={this.props.info.agency}/>
                                 <div className="extra-logos">
                                     <img src="img/icons/logo-01.png" alt="" />
                                     <img src="img/icons/logo-01.png" alt="" />
@@ -119,7 +126,7 @@ class SingleItem extends Component {
                             </div>
                         </div>
                     </div>
-                    <Link to="/" className="arrow-switcher right"></Link>
+                    <div onClick={() => { this.props.switchPopup('right') }} className="arrow-switcher right"></div>
                 </div>
             </div>
 

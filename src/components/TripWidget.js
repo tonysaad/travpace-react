@@ -5,14 +5,15 @@ import FavBtn from './FavBtn';
 import Label from './Label';
 import TravelIncluded from './TravelIncluded';
 import {
-  BrowserRouter as Router,
-  Route,
-  Link
+//   BrowserRouter as Router,
+//   Route,
+//   Link
 } from 'react-router-dom'
 
 class TripWidget extends Component {
     constructor(props){
         super(props);
+        // console.log(props)
     }
 
     price(hasDiscount){
@@ -39,17 +40,18 @@ class TripWidget extends Component {
     }
    
   render() {
-      let rating = (this.props.info.type == "hotel-deal")? (<Starts rating = {this.props.info.rating}/>) : (<Starts/>);
-      let staticTitle = (this.props.info.type == "hotel-deal")? "فندق" : "عرض";
+      let rating = (this.props.info.type === "hotel-deal")? (<Starts rating = {this.props.info.rating}/>) : (<Starts/>);
+      let staticTitle = (this.props.info.type === "hotel-deal")? "فندق" : "عرض";
       let TripImg = {
   backgroundImage: `url(${this.props.info.featuredImg.thumbnail})`,
 }; 
     return (
 <div className="col">
-    <div onClick={()=>{this.props.popupFunction(true, this.props.info)}} className="default-widget hotel-deal">
+    <div onClick={()=>{console.log(this.props.key);this.props.popupFunction(true, this.props.index)}} className="default-widget hotel-deal">
         <div className="pic" style={TripImg}>
 
         </div>
+        <div>
         <div className="widget-hotel-content">
             <h2>{staticTitle + " " + this.props.info.title}
                 {rating}
@@ -59,6 +61,7 @@ class TripWidget extends Component {
             <TravelIncluded days = {this.props.info.days} mealPlan = {this.props.info.mealPlan}/>
         </div>
         {this.price(this.props.info.hasOwnProperty("discount"))}
+        </div>
         <div className="visibility-watch">
             <img src="/img/icons/visibility.png" alt="visibility"/>
             <span className="num">2398</span>

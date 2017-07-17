@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import '../components/travel-dates/travel-dates.css';
 import {
-  BrowserRouter as Router,
-  Route,
+//   BrowserRouter as Router,
+//   Route,
   Link
 } from 'react-router-dom'
 
@@ -42,7 +42,6 @@ class TravelDates extends Component {
                 </tr>
             </tbody>
         </table>
-        <Link to="/book" className="btn">أحجز الآن</Link>
     </div>
 
     );
