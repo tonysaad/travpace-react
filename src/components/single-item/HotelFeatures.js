@@ -5,6 +5,7 @@ class HotelFeatures extends Component {
   render() {
     let features = this.props.features.map((feature) => {
       return(<li>{feature}</li>);
+    
     })
     return (
       <div className="HotelFeatures">
