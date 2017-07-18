@@ -26,7 +26,7 @@ class ListPaginationWrapper extends Component {
   }
 switchPopup=(direction) =>{
   if (this.state.popupIndex +1 < this.state.list.length && direction === 'left') {
-    this.props.history.push("/"+this.state.list[this.state.popupIndex +1].id);
+    this.props.history.replace("/"+this.state.list[this.state.popupIndex +1].id);
     this.setState({ popupIndex: this.state.popupIndex +1})
   }
   if (this.state.popupIndex -1 >= 0 && direction === 'right') {
