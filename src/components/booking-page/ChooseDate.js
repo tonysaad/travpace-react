@@ -4,23 +4,29 @@ import './booking-page.css';
 import 'react-dates/lib/css/_datepicker.css';
 
 class ChooseDate extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    };
+  }
   render() {
     return (
 
-        <div className="ChooseDate">
-          <div className="booking-small-head">
-            <h3>أختار تاريخ السفر</h3>
-          </div>
-          <div className="booking-text-content">
-<DateRangePicker
-  startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-  endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-  onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
-  focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-  onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
-/>
-          </div>
+      <div className="ChooseDate">
+        <div className="booking-small-head">
+          <h3>أختار تاريخ السفر</h3>
         </div>
+        <div className="booking-text-content">
+          <DayPickerRangeController
+            onDatesChange={this.onDatesChange}
+            onFocusChange={this.onFocusChange}
+            focusedInput={this.state.focusedInput}
+            startDate={this.state.startDate}
+            endDate={this.state.endDate}
+          />
+        </div>
+      </div>
 
     );
   }

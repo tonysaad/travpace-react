@@ -5,7 +5,7 @@
 .booking-small-head { color: #fff; background: #262C32; border-radius: 4px 4px 0 0; display: flex; padding: 5px 14px; justify-content: space-between; } 
 .booking-small-head h3 { font-size: 14px; font-weight: 700; } 
 .booking-small-head span { font-size: 12px; font-weight: 300; } 
-.booking-text-content { border-radius: 0 0 4px 4px; background-color: #fff; box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10); } 
+.booking-text-content { border-radius: 0 0 4px 4px; background-color: #fff; box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10);position: relative;}
 .select-item { border-top: 1px solid #DCDEE0; } 
 .select-item:first-child { border: none; } 
 
