@@ -19,7 +19,7 @@
 .PackageInfo .content .Info h2 { font-weight: 700; font-size: 20px; line-height: 1.4; margin-top: 4px; } 
 .PackageInfo .content .Info .travel-included { margin: 10px 0 0; } 
 .PackageInfo .content .agency-details-Booking { border: none; padding: 0; flex-grow: 1; flex-shrink: 1; flex-basis: 100%; margin: 0; align-self: flex-end; } 
-.PackageInfo .content .agency-details-Booking .pic { vertical-align: middle; display: inline-block; background: #FFFFFF; border: 1px solid #DCDEE0; border-radius: 2px; width: 88px; height: 66px; text-align: center; } 
+.PackageInfo .content .agency-details-Booking .pic { vertical-align: middle; display: inline-block; background: #FFFFFF; border: 1px solid #DCDEE0; border-radius: 2px; width: 88px; height: 66px; text-align: center;display: inline-flex;align-items: center;} 
 .PackageInfo .content .agency-details-Booking .pic img { max-height: 100%; } 
 .PackageInfo .content .agency-details-Booking .details { vertical-align: middle; display: inline-block; padding-right: 10px; font-size: 0; } 
 .PackageInfo .content .agency-details-Booking .details p { font-family: 'Cairo', sans-serif; font-size: 11px; color: #000000; font-style: normal; font-weight: 300; } 
