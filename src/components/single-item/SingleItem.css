@@ -1,0 +1,4 @@
+.HotelFeatures{margin-top: 100px;border-top: 2px solid #DBDDE0;padding: 20px 0 0;}
+.HotelFeatures h3{font-weight: 700;font-size: 14px;}
+.HotelFeatures ul{font-size: 0;}
+.HotelFeatures ul li{width: 50%;font-size: 12px;font-weight: 300;display: inline-block;line-height: 26px;}

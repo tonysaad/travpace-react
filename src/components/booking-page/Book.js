@@ -24,7 +24,7 @@ class Book extends Component {
 
   componentDidMount() {
     document.body.classList.toggle('no-scroll', false)
-    axios.get(`http://localhost:4321/deals-and-packages/${this.props.params.id}`).then(response => {
+    axios.get(`http://thebackendcrew.com:8888/deals-and-packages/${this.props.params.id}`).then(response => {
       this.setState({
         info:response.data
       })

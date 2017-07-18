@@ -4,6 +4,7 @@ import TravelIncluded from '../TravelIncluded';
 import BookNum from '../BookNum';
 import Carousel from 'react-image-carousel';
 import QRHeader from '../QRHeader';
+import HotelFeatures from './HotelFeatures';
 import Label from '../Label';
 import TravelDates from '../TravelDates';
 import AgencyDetails from '../AgencyDetails';
@@ -114,6 +115,7 @@ class SingleItem extends Component {
                                 </div>
                                 <TravelDates />
                                 <Link to={"/book/"+this.props.info.id} className="btn">أحجز الآن</Link>
+                                <HotelFeatures features= {this.props.info.hotel.features}/>
                                 <AgencyDetails agency={this.props.info.agency}/>
                                 <div className="extra-logos">
                                     <img src="img/icons/logo-01.png" alt="" />
