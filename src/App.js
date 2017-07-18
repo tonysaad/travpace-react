@@ -5,17 +5,14 @@ import TravelIncluded from './components/TravelIncluded';
 import Header from './components/Header';
 import ListPaginationWrapper from './components/list-pagination-wrapper/ListPaginationWrapper';
 import Filter from './components/Filter';
-// import Starts from './components/Starts';
-// import FavBtn from './components/FavBtn';
 import QRHeader from './components/QRHeader';
-// import UsersWatch from './components/UsersWatch';
 import Label from './components/Label';
 import ListPrices from './components/ListPrices';
 import TravelDates from './components/TravelDates';
 import Book from './components/booking-page/Book';
 import Thanks from './components/thanks-page/Thanks';
+import SinglePage from './components/single-item/SinglePage';
 import Carousel from 'react-image-carousel';
-// import ReactModal from 'react-modal';
 import './css/reset.css';
 import './css/base.css';
 import {
@@ -41,7 +38,7 @@ const App = () => (
     <div>
       <Header/>
       <Route exact path="/" component={Home}/>
-      <Route exact path="/single" component={Single}/>
+      <Route exact path="/:id" component={(match) => <SinglePage params={match.match.params}/>} />
       <Route exact path="/book/:id" component={(match) => <Book params={match.match.params}/>} />
       <Route exact path="/thanks" component={Thanks}/>
     </div>

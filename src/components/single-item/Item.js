@@ -1,22 +1,17 @@
 import React, { Component } from 'react';
+import QRHeader from '../QRHeader';
+import { Link } from 'react-router-dom';
+import BookNum from '../BookNum';
 import ListPrices from '../ListPrices';
 import TravelIncluded from '../TravelIncluded';
-import BookNum from '../BookNum';
 import Carousel from 'react-image-carousel';
-import QRHeader from '../QRHeader';
 import HotelFeatures from './HotelFeatures';
 import Label from '../Label';
 import TravelDates from '../TravelDates';
 import AgencyDetails from '../AgencyDetails';
-import Item from './Item';
-import { Link } from 'react-router-dom';
 
-class SingleItem extends Component {
-    constructor(props) {
-        super(props);
-        console.log(this.props.info);
+class Item extends Component {
 
-    }
     itenerary() {
         return (
             <div>
@@ -66,19 +61,66 @@ class SingleItem extends Component {
             return image.original;
         })
         let itenerary = (this.props.info.type == "hotel") ? '' : this.itenerary();
-        console.log("images");
-        console.log(images);
+
         return (
-            <div className="quick-view">
-                <div onClick={() => { this.props.popupFunction(false) }} className="close"></div>
-                <div className="quick-view-items">
-                    <div onClick={() => { this.props.switchPopup('left') }} className="arrow-switcher left"></div>
-                    <Item info={this.props.info}/>
-                    <div onClick={() => { this.props.switchPopup('right') }} className="arrow-switcher right"></div>
+            <div className="item">
+                <div className="head">
+                    <QRHeader info={this.props.info} />
+                </div>
+                <div className="trip-content">
+                    <div className="trip-right-side">
+                        <div className="img-carousel">
+                            <Carousel images={images} thumb={true} loop={true} />
+                        </div>
+                        <div className="flight-img">
+                            <img src="/img/flight-img.png" alt="flight-img" />
+                        </div>
+                        <div className="labels">
+                            <Label />
+                            <Label />
+                        </div>
+
+                        <div className="trip-data">
+                            <div className="item">
+                                <p>{this.props.info.hotel.description}</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div className="trip-left-side">
+                        <BookNum phone={this.props.info.agency.phone} />
+                        <TravelIncluded days={this.props.info.days} mealPlan={this.props.info.mealPlan} />
+                        <div className="list-prices">
+                            <div className="select-sec">
+                                <select name="room-views-month">
+                                    <option value="1">العرض ساري من ١ مايو ٢٠١٧  حتي 15 مايو ٢٠١٧</option>
+                                    <option value="2">العرض ساري من ١ سبتمبر ٢٠١٧  حتي 15 سبتمبر ٢٠١٧</option>
+                                </select>
+                            </div>
+                            <ul>
+                                <ListPrices />
+                                <ListPrices />
+                                <ListPrices />
+                            </ul>
+                        </div>
+                        <TravelDates />
+                        <Link to={"/book/" + this.props.info.id} className="btn">أحجز الآن</Link>
+                        <HotelFeatures features={this.props.info.hotel.features} />
+                        <AgencyDetails agency={this.props.info.agency} />
+                        <div className="extra-logos">
+                            <img src="img/icons/logo-01.png" alt="" />
+                            <img src="img/icons/logo-01.png" alt="" />
+                        </div>
+                        <div className="sponsored">
+                            <span>برعاية</span>
+                            <img src="/img/right-sponsored.png" alt="sponsored" />
+                        </div>
+                    </div>
                 </div>
             </div>
-
         );
     }
 }
-export default SingleItem;
+
+export default Item;
