@@ -14,11 +14,15 @@ class TripWidget extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            liked: false
+            liked: false,
+            waiting: true
         };
     }
-    toggleLike = ()=>{
-        this.setState({liked: !this.state.liked})
+    toggleLike = () => {
+        this.setState({ liked: !this.state.liked })
+    }
+    notWaiting(){
+        this.setState({waiting: false});
     }
     price(hasDiscount) {
         let price = (hasDiscount) ? this.props.info.discount : this.props.info.doublePrice;
@@ -38,7 +42,7 @@ class TripWidget extends Component {
                 </h3>
                 <p>للغرفة المزدوجة شاملة الضرائب</p>
             </div>
-            <FavBtn liked={this.state.liked}toggleLike={this.toggleLike}/>
+            <FavBtn liked={this.state.liked} toggleLike={this.toggleLike} />
         </div>
         )
     }
@@ -49,11 +53,12 @@ class TripWidget extends Component {
         let TripImg = {
             backgroundImage: `url(${this.props.info.featuredImg.thumbnail})`,
         };
+        let TripImg2 = this.props.info.featuredImg.thumbnail;
         return (
             <div className="col">
-                <div onClick={() => { console.log(this.props.key); this.props.popupFunction(true, this.props.index) }} className="default-widget hotel-deal">
+                <div onClick={() => { console.log(this.props.key); this.props.popupFunction(true, this.props.index) }} className={!this.state.waiting? 'default-widget hotel-deal' :'default-widget hotel-deal waiting' }>
                     <div className="pic" style={TripImg}>
-
+                        <img onLoad={this.notWaiting.bind(this)} src={TripImg2} />
                     </div>
                     <div>
                         <div className="widget-hotel-content">
