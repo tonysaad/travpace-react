@@ -1,13 +1,4 @@
 import React, { Component } from 'react';
-import ListPrices from '../ListPrices';
-import TravelIncluded from '../TravelIncluded';
-import BookNum from '../BookNum';
-import Carousel from 'react-image-carousel';
-import QRHeader from '../QRHeader';
-import HotelFeatures from './HotelFeatures';
-import Label from '../Label';
-import TravelDates from '../TravelDates';
-import AgencyDetails from '../AgencyDetails';
 import Item from './Item';
 import { Link } from 'react-router-dom';
 
@@ -69,12 +60,12 @@ class SingleItem extends Component {
         console.log("images");
         console.log(images);
         return (
-            <div className="quick-view">
+            <div className="quick-view"  onClick={() => { this.props.popupFunction(false) }}>
                 <div onClick={() => { this.props.popupFunction(false) }} className="close"></div>
                 <div className="quick-view-items">
-                    <div onClick={() => { this.props.switchPopup('left') }} className="arrow-switcher left"></div>
-                    <Item info={this.props.info}/>
-                    <div onClick={() => { this.props.switchPopup('right') }} className="arrow-switcher right"></div>
+                    <div onClick={(event) => { event.stopPropagation();this.props.switchPopup('left') }} className="arrow-switcher left"></div>
+                    <Item info={this.props.info} onClick={(event)=>{console.log("ojja");event.stopPropagation();}}/>
+                    <div onClick={(event) => { event.stopPropagation();this.props.switchPopup('right') }} className="arrow-switcher right"></div>
                 </div>
             </div>
 

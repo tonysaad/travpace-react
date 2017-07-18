@@ -56,11 +56,17 @@ class Item extends Component {
             </div>
         )
     }
+    traveldates() {
+        return (
+            <TravelDates />
+        )
+    }
     render() {
         let images = this.props.info.hotel.gallery.map((image, index) => {
             return image.original;
         })
-        let itenerary = (this.props.info.type == "hotel") ? '' : this.itenerary();
+        let itenerary = (this.props.info.type === "hotel") ? '' : this.itenerary();
+        let traveldates = (this.props.info.type === "hotel") ? '' : this.traveldates();
 
         return (
             <div className="item">
@@ -84,7 +90,7 @@ class Item extends Component {
                             <div className="item">
                                 <p>{this.props.info.hotel.description}</p>
                             </div>
-
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1726.1166949101005!2d31.3395858!3d30.0875015!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1500388216736"></iframe>
                         </div>
 
                     </div>
@@ -104,7 +110,6 @@ class Item extends Component {
                                 <ListPrices />
                             </ul>
                         </div>
-                        <TravelDates />
                         <Link to={"/book/" + this.props.info.id} className="btn">أحجز الآن</Link>
                         <HotelFeatures features={this.props.info.hotel.features} />
                         <AgencyDetails agency={this.props.info.agency} />

@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
 import '../components/travel-dates/travel-dates.css';
-import {
-//   BrowserRouter as Router,
-//   Route,
-  Link
-} from 'react-router-dom'
 
 class TravelDates extends Component {
   render() {

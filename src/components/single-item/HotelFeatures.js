@@ -3,7 +3,7 @@ import './SingleItem.css';
 
 class HotelFeatures extends Component {
   render() {
-    let features = this.props.features.map((feature) => {
+    let features = this.props.features.map((feature, i) => {
       return(<li>{feature}</li>);
     
     })
