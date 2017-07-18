@@ -6,8 +6,12 @@ class SinglePage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            info: ''
+            info: '',
+            liked: false
         };
+    }
+    toggleLike = ()=>{
+        this.setState({liked: !this.state.liked})
     }
     componentDidMount() {
         axios.get(`http://thebackendcrew.com:8888/deals-and-packages/${this.props.params.id}`).then(response => {
@@ -22,7 +26,7 @@ class SinglePage extends Component {
         }
         return (
             <div className="single-page">
-                <Item info={this.state.info} />
+                <Item info={this.state.info}  liked={this.state.liked} toggleLike={this.toggleLike}/>
             </div>
         );
     }

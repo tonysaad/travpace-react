@@ -28,7 +28,7 @@ class QRHeader extends Component {
             <p className="premium-icon">عرض من شركة توريكو للسياحة</p>
         </div>
         <UsersWatch/>
-        <FavBtn/>
+        <FavBtn  liked={this.props.liked} toggleLike={this.props.toggleLike}/>
     </div>
 
     );

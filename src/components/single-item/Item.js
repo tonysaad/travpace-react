@@ -69,9 +69,9 @@ class Item extends Component {
         let traveldates = (this.props.info.type === "hotel") ? '' : this.traveldates();
 
         return (
-            <div className="item">
+            <div className="item"  onClick={(event)=>{console.log("ojja");event.stopPropagation();}}>
                 <div className="head">
-                    <QRHeader info={this.props.info} />
+                    <QRHeader info={this.props.info}  liked={this.props.liked} toggleLike={this.props.toggleLike}/>
                 </div>
                 <div className="trip-content">
                     <div className="trip-right-side">

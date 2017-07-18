@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 class SingleItem extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            liked: false
+        };
         console.log(this.props.info);
 
     }
@@ -52,6 +55,9 @@ class SingleItem extends Component {
             </div>
         )
     }
+    toggleLike = ()=>{
+        this.setState({liked: !this.state.liked})
+    }
     render() {
         let images = this.props.info.hotel.gallery.map((image, index) => {
             return image.original;
@@ -64,7 +70,7 @@ class SingleItem extends Component {
                 <div onClick={() => { this.props.popupFunction(false) }} className="close"></div>
                 <div className="quick-view-items">
                     <div onClick={(event) => { event.stopPropagation();this.props.switchPopup('left') }} className="arrow-switcher left"></div>
-                    <Item info={this.props.info} onClick={(event)=>{console.log("ojja");event.stopPropagation();}}/>
+                    <Item info={this.props.info}  liked={this.state.liked} toggleLike={this.toggleLike}/>
                     <div onClick={(event) => { event.stopPropagation();this.props.switchPopup('right') }} className="arrow-switcher right"></div>
                 </div>
             </div>
