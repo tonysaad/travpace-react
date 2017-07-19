@@ -27,7 +27,7 @@
 
 .default-widget.waiting .widget-hotel-content h2 { position: relative; } 
 .default-widget.waiting .widget-hotel-content h2:after { content: ""; position: absolute; top: 0; right: 0; left: 0; bottom: 0; background-color: #fff; z-index: 1; } 
-.default-widget.waiting .widget-hotel-content h2:before { content: ""; position: absolute; top: 0; right: 0; left: 0; height: 15px; animation-duration: 1.5s; animation-fill-mode: forwards; animation-iteration-count: infinite; animation-timing-function: linear; animation-name: placeHolderShimmer; background: #f6f7f8; background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%); background-size: 800px 104px; z-index: 2; } 
+.default-widget.waiting .widget-hotel-content h2:before { content: ""; position: absolute; top: 0; right: 0; left: 0; height: 15px; animation-duration: 1.5s; animation-fill-mode: forwards; animation-iteration-count: infinite; animation-timing-function: linear; animation-name: placeHolderShimmer; background: #f6f7f8; background: linear-gradient(to right, #E5EBF1 8%, #dce3ea 18%, #E5EBF1 33%); background-size: 800px 104px; z-index: 2; } 
 
 @keyframes placeHolderShimmer { 
  0% { background-position: 468px 0}
@@ -36,7 +36,7 @@
 
 .default-widget.waiting .widget-hotel-content h2+p { position: relative; } 
 .default-widget.waiting .widget-hotel-content h2+p:after { content: ""; position: absolute; top: 0; right: 0; left: 0; bottom: 0; background-color: #fff; z-index: 1; } 
-.default-widget.waiting .widget-hotel-content h2+p:before { content: ""; position: absolute; top: 0; right: 0; left: 0; height: 10px; animation-duration: 1.5s; animation-fill-mode: forwards; animation-iteration-count: infinite; animation-timing-function: linear; animation-name: placeHolderP; background: #f6f7f8; background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%); background-size: 800px 104px; z-index: 2; } 
+.default-widget.waiting .widget-hotel-content h2+p:before { content: ""; position: absolute; top: 0; right: 0; left: 0; height: 10px; animation-duration: 1.5s; animation-fill-mode: forwards; animation-iteration-count: infinite; animation-timing-function: linear; animation-name: placeHolderP; background: #f6f7f8; background: linear-gradient(to right, #E5EBF1 8%, #dce3ea 18%, #E5EBF1 33%); background-size: 800px 104px; z-index: 2; } 
 
 @keyframes placeHolderP { 
  0% { background-position: 468px 0}
