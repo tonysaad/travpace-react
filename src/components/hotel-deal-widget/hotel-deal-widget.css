@@ -1,5 +1,6 @@
-.default-widget { background: #FFFFFF; box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.10); -webkit-transition: all .2s; -moz-transition: all .2s; -o-transition: all .2s; transition: all .2s; border-radius: 4px; position: relative; display: block; color: #000; } 
+.default-widget {cursor: pointer; background: #FFFFFF; box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.10); -webkit-transition: all .2s; -moz-transition: all .2s; -o-transition: all .2s; transition: all .2s; border-radius: 4px; position: relative; display: block; color: #000; } 
 .default-widget .pic { padding-top: 75%; background-position: center; background-repeat: no-repeat; background-size: cover; border-radius: 4px 4px 0 0; position: relative; } 
+.default-widget .pic img{display: none;}
 .default-widget .widget-hotel-content { padding: 10px 20px; font-size: 0; } 
 .default-widget .widget-hotel-content h2 { color: #000000; font-size: 16px; font-weight: 700; } 
 .default-widget .widget-hotel-content h2 .starts { display: inline-block; vertical-align: middle; height: 16px; margin-right: 5px; } 
@@ -12,7 +13,7 @@
 .travel-package .price h3 span { font-size: 10px; font-weight: 400; vertical-align: middle; display: inline-block; } 
 .visibility-watch { font-size: 10px; color: #798694; text-align: left; padding: 10px 20px; line-height: 22px; border-top: 1px solid #E5EBF1; position: absolute; top: 100%; left: 0; right: 0; background-color: #fff; box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25); -webkit-transition: all .2s; -moz-transition: all .2s; -o-transition: all .2s; transition: all .2s; border-radius: 0 0 4px 4px; opacity: 0; visibility: hidden; } 
 .visibility-watch img { width: 17px; vertical-align: middle; } 
-.visibility-watch .num { font-size: 11px; vertical-align: middle; } 
+.visibility-watch .num { font-size: 11px; vertical-align: middle;margin: 0 5px;} 
 .default-widget:hover .visibility-watch { opacity: 1; visibility: visible; } 
 .default-widget:hover .widget-hotel-foot { border-radius: 0; } 
 .default-widget:hover { box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25); border-radius: 4px 4px 0 0; } 
@@ -26,7 +27,7 @@
 
 .default-widget.waiting .widget-hotel-content h2 { position: relative; } 
 .default-widget.waiting .widget-hotel-content h2:after { content: ""; position: absolute; top: 0; right: 0; left: 0; bottom: 0; background-color: #fff; z-index: 1; } 
-.default-widget.waiting .widget-hotel-content h2:before { content: ""; position: absolute; top: 0; right: 0; left: 0; height: 15px; animation-duration: 1.5s; animation-fill-mode: forwards; animation-iteration-count: infinite; animation-timing-function: linear; animation-name: placeHolderShimmer; background: #f6f7f8; background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%); background-size: 800px 104px; z-index: 2; } 
+.default-widget.waiting .widget-hotel-content h2:before { content: ""; position: absolute; top: 0; right: 0; left: 0; height: 15px; animation-duration: 1.5s; animation-fill-mode: forwards; animation-iteration-count: infinite; animation-timing-function: linear; animation-name: placeHolderShimmer; background: #f6f7f8; background: linear-gradient(to right, #E5EBF1 8%, #dce3ea 18%, #E5EBF1 33%); background-size: 800px 104px; z-index: 2; } 
 
 @keyframes placeHolderShimmer { 
  0% { background-position: 468px 0}
@@ -35,7 +36,7 @@
 
 .default-widget.waiting .widget-hotel-content h2+p { position: relative; } 
 .default-widget.waiting .widget-hotel-content h2+p:after { content: ""; position: absolute; top: 0; right: 0; left: 0; bottom: 0; background-color: #fff; z-index: 1; } 
-.default-widget.waiting .widget-hotel-content h2+p:before { content: ""; position: absolute; top: 0; right: 0; left: 0; height: 10px; animation-duration: 1.5s; animation-fill-mode: forwards; animation-iteration-count: infinite; animation-timing-function: linear; animation-name: placeHolderP; background: #f6f7f8; background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%); background-size: 800px 104px; z-index: 2; } 
+.default-widget.waiting .widget-hotel-content h2+p:before { content: ""; position: absolute; top: 0; right: 0; left: 0; height: 10px; animation-duration: 1.5s; animation-fill-mode: forwards; animation-iteration-count: infinite; animation-timing-function: linear; animation-name: placeHolderP; background: #f6f7f8; background: linear-gradient(to right, #E5EBF1 8%, #dce3ea 18%, #E5EBF1 33%); background-size: 800px 104px; z-index: 2; } 
 
 @keyframes placeHolderP { 
  0% { background-position: 468px 0}
@@ -46,3 +47,21 @@
 .default-widget.waiting .hotel-label,
 .default-widget.waiting .travel-included,
 .default-widget.waiting .visibility-watch { opacity: 0; visibility: visible; pointer-events: none; } 
+
+.HomePage .container .list-view.rows-01 .col{max-width: 100%;flex-basis: 100%;height: 255px;}
+.list-view.rows-01 .default-widget .pic{width: 340px;padding-top: 0;height: 100%;border-radius: 0 4px 4px 0;}
+.list-view.rows-01 .default-widget{display: flex;height: 100%;background: #FFFFFF;box-shadow: 0 1px 4px 0 rgba(0,0,0,0.25);border-radius: 4px;}
+.list-view.rows-01 .widget-hotel-foot{margin-right: auto;border-top: none;border-right: 1px solid #E5EBF1;padding: 0 20px;margin-top: 15px;margin-bottom: 15px;}
+.list-view.rows-01 .widget-hotel-foot .fav-btn{margin-right: 60px;}
+.list-view.rows-01 .default-widget > div:nth-child(2){display: flex;flex: 1;}
+
+.list-view.rows-02 .default-widget > div:nth-child(2){display: flex;flex: 1;flex-direction: column;}
+.HomePage .container .list-view.rows-02 .col{max-width: 100%;flex-basis: 100%;height: 255px;}
+.list-view.rows-02 .default-widget .pic{width: 340px;padding-top: 0;height: 100%;border-radius: 0 4px 4px 0;}
+.list-view.rows-02 .default-widget{display: flex;height: 100%;background: #FFFFFF;box-shadow: 0 1px 4px 0 rgba(0,0,0,0.25);border-radius: 4px;}
+.list-view.rows-02 .widget-hotel-foot{padding: 15px 20px;margin-top: 0;}
+.list-view.rows-02 .widget-hotel-foot .fav-btn{margin-right: 60px;}
+.list-view.rows-02 .default-widget .widget-hotel-content{flex: 1;}
+.list-view.rows-02 .default-widget .price{font-size: 0;}
+.list-view.rows-02 .widget-hotel-foot .price>span{margin-bottom: 6px;}
+.list-view.rows-02 .hotel-label{position: absolute;bottom: 0;right: 0;/* Rectangle 2: */box-shadow: -3px -1px 4px 0 rgba(0,0,0,0.20);}

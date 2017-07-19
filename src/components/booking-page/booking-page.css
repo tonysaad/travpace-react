@@ -5,7 +5,7 @@
 .booking-small-head { color: #fff; background: #262C32; border-radius: 4px 4px 0 0; display: flex; padding: 5px 14px; justify-content: space-between; } 
 .booking-small-head h3 { font-size: 14px; font-weight: 700; } 
 .booking-small-head span { font-size: 12px; font-weight: 300; } 
-.booking-text-content { border-radius: 0 0 4px 4px; background-color: #fff; box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10); } 
+.booking-text-content { border-radius: 0 0 4px 4px; background-color: #fff; box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10);position: relative;}
 .select-item { border-top: 1px solid #DCDEE0; } 
 .select-item:first-child { border: none; } 
 
@@ -19,7 +19,7 @@
 .PackageInfo .content .Info h2 { font-weight: 700; font-size: 20px; line-height: 1.4; margin-top: 4px; } 
 .PackageInfo .content .Info .travel-included { margin: 10px 0 0; } 
 .PackageInfo .content .agency-details-Booking { border: none; padding: 0; flex-grow: 1; flex-shrink: 1; flex-basis: 100%; margin: 0; align-self: flex-end; } 
-.PackageInfo .content .agency-details-Booking .pic { vertical-align: middle; display: inline-block; background: #FFFFFF; border: 1px solid #DCDEE0; border-radius: 2px; width: 88px; height: 66px; text-align: center; } 
+.PackageInfo .content .agency-details-Booking .pic { vertical-align: middle; display: inline-block; background: #FFFFFF; border: 1px solid #DCDEE0; border-radius: 2px; width: 88px; height: 66px; text-align: center;display: inline-flex;align-items: center;} 
 .PackageInfo .content .agency-details-Booking .pic img { max-height: 100%; } 
 .PackageInfo .content .agency-details-Booking .details { vertical-align: middle; display: inline-block; padding-right: 10px; font-size: 0; } 
 .PackageInfo .content .agency-details-Booking .details p { font-family: 'Cairo', sans-serif; font-size: 11px; color: #000000; font-style: normal; font-weight: 300; } 

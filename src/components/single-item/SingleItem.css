@@ -1,0 +1,37 @@
+.HotelFeatures{margin-top: 100px;border-top: 2px solid #DBDDE0;padding: 20px 0 0;}
+.HotelFeatures h3{font-weight: 700;font-size: 14px;}
+.HotelFeatures ul{font-size: 0;}
+.HotelFeatures ul li{width: 50%;font-size: 12px;font-weight: 300;display: inline-block;line-height: 26px;}
+
+/* Single Page */
+.single-page {padding: 50px 20px;border-top: 1px solid #DBDDE0;}
+.single-page > .item{max-width: 980px;}
+.single-page .quick-view-items > .item { background-color: #F4F4F4; padding: 35px 40px; max-width: 980px; margin: 0 auto; border-radius: 8px; } 
+.single-page .arrow-switcher { background-color:rgba(0, 0, 0, 0.2); background-image: url('/img/icons/arrow-right-white.png'); background-position: center; border-radius: 4px; width: 80px; position: absolute; height: 335px; top: 115px; background-repeat: no-repeat; background-size: 14px; transition: all .2s; cursor: pointer;} 
+.single-page .arrow-switcher:hover { background-color:rgba(0, 0, 0, 0.8); } 
+.single-page .arrow-switcher.left { left: 0; } 
+.single-page .arrow-switcher.right { transform: rotate(180deg); right: 0; } 
+.single-page .close { height: 16px; width: 16px; position: relative; position: absolute; top: 24px; right: 24px; cursor: pointer } 
+.single-page .close::before { content:''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: #fff; transform: rotate(135deg); } 
+.single-page .close::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: #fff; transform: rotate(-135deg); } 
+.single-page .trip-content { display: flex; justify-content: space-between; } 
+.single-page .trip-content .trip-right-side { width: 516px; } 
+.single-page .img-carousel { background-color:#F4F4F4; padding: 20px 20px 8px; margin-top: 20px; margin-bottom: 40px; } 
+.single-page .carousel .carousel-main { width: 100%; overflow: hidden; margin-bottom: 17px; } 
+.single-page .carousel .carousel-main span { width: 100%; height: 100%; overflow: hidden; display: block; position: relative; } 
+.single-page .carousel .carousel-main span img { margin: auto; width: 100%; display: block; } 
+.single-page .carousel .next,.single-page .carousel .prev { display: none; } 
+.single-page .carousel-footer { display: flex; align-items: center; overflow: hidden; margin: 0 auto; } 
+.single-page .carousel .carousel-footer .box { display: flex; width: calc(100% + 12px); flex-wrap: wrap; margin: 0 -6px; } 
+.single-page .carousel .carousel-footer .box .carousel-thumb { width: calc(25% - 12px); height: 70px; background-position: 50%; background-repeat: no-repeat; cursor: pointer; background-size: cover; margin: 0 6px 15px; } 
+.single-page .flight-img { text-align: center; } 
+.single-page .labels { padding-bottom: 10px; border-bottom: 2px solid #1FCAA0; margin-bottom: 15px; }
+.single-page .trip-data .item+.item { border-top: 2px solid #DBDDE0; margin-top: 30px; padding-top: 20px; } 
+.single-page .trip-data .item p { font-size: 14px; font-weight: 300; line-height: 1.5; } 
+.single-page .trip-data .item p+p { margin-top: 20px; } 
+.single-page .trip-data iframe{width: 100%;height: 230px;margin-top: 30px;}
+.single-page .trip-left-side { width: 331px; } 
+.single-page .extra-logos { display: flex; margin: 20px 0 50px; } 
+.single-page .extra-logos img { margin-left: 10px; } 
+.single-page .sponsored { margin: 0; } 
+.single-page .sponsored img { max-width: 200px; } 

@@ -9,14 +9,14 @@ class TravelIncluded extends Component {
     switch(plan.toLowerCase()){
       case "full board" :  return "شاملة الفطار و الغذاء و العشاء"; break;
       case "bed and breakfast":  return "شاملة الفطار"; break; 
-      case "half board":  return "شاملة الفطار و العشاء"; break; 
+      default: return "شاملة الفطار و العشاء"; break; 
     }
   }
   render() {
     return (
         <ul className="travel-included">
           <li className="days">{this.props.days} أيام</li>
-          {/* <li className="breakfast-dinner">{this.mealPlan(this.props.mealPlan)}</li> */}
+          { <li className="breakfast-dinner">{this.mealPlan(this.props.mealPlan)}</li> }
         </ul>
     );
   }
