@@ -4,6 +4,7 @@ import Starts from './Starts';
 import FavBtn from './FavBtn';
 import Label from './Label';
 import TravelIncluded from './TravelIncluded';
+
 import {
     //   BrowserRouter as Router,
     //   Route,
@@ -24,6 +25,7 @@ class TripWidget extends Component {
     notWaiting(){
         this.setState({waiting: false});
     }
+    
     price(hasDiscount) {
         let price = (hasDiscount) ? this.props.info.discount : this.props.info.doublePrice;
         let discount = (hasDiscount) ? (<div className="sale-widget">
@@ -37,7 +39,7 @@ class TripWidget extends Component {
         return (<div className="widget-hotel-foot">
             <div className="price">
                 <span>جنيه</span>
-                <h3 className="hot-deal">{price}
+                <h3>{price}
                     {discount}
                 </h3>
                 <p>للغرفة المزدوجة شاملة الضرائب</p>
@@ -55,14 +57,14 @@ class TripWidget extends Component {
         };
         let TripImg2 = this.props.info.featuredImg.thumbnail;
         return (
-            <div className="col">
+            <div className="col"  data-aos="fade">
                 <div onClick={() => { console.log(this.props.key); this.props.popupFunction(true, this.props.index) }} className={!this.state.waiting? 'default-widget hotel-deal' :'default-widget hotel-deal waiting' }>
                     <div className="pic" style={TripImg}>
                         <img onLoad={this.notWaiting.bind(this)} src={TripImg2} />
                     </div>
                     <div>
                         <div className="widget-hotel-content">
-                            <h2>{staticTitle + " " + this.props.info.title}
+                            <h2 className="hot-deal">{staticTitle + " " + this.props.info.title}
                                 {rating}
                             </h2>
                             <p className="premium-icon">{"عرض من شركة " + this.props.info.agency.name}</p>
