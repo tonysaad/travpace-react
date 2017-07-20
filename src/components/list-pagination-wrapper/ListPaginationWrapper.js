@@ -41,7 +41,7 @@ class ListPaginationWrapper extends Component {
       this.props.history.push("/" + this.state.list[popupIndex].id);
 
     else
-      this.props.history.goBack();
+      this.props.history.replace("/");
     this.setState({ popupToggle, popupIndex })
   }
 
