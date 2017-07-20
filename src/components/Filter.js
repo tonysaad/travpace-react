@@ -13,8 +13,10 @@ class Filter extends Component {
             ratings: [],
             mealPlan: [],
             type :[],
+            inEgypt: [],
             shortTrip: false,
-            longTrip: false
+            longTrip: false,
+            premium: false
         }
     }
     addRating = (rating) => {
@@ -72,7 +74,17 @@ class Filter extends Component {
         this.setState({ shortTrip: !this.state.shortTrip });
     }
     
-    addType
+    addEgypt = (inEgypt) => {
+        let newInEgyptList = [...this.state.inEgypt];
+        let index = this.state.inEgypt.indexOf(inEgypt);
+        if (index == -1)
+            newInEgyptList.push(inEgypt);
+
+        else
+            newInEgyptList.splice(index, 1);
+        this.props.updateFilters({'in-egypt':newInEgyptList})
+        this.setState({ inEgypt: newInEgyptList });
+    }  
   
     render() {
         return (
@@ -89,8 +101,8 @@ class Filter extends Component {
                     <label className="checkbox" for="trips"><input onClick={() => { this.addType("travel-package") }} type="checkbox" name="رحلات سياحية" value="" id="trips" /><span></span> رحلات سياحية</label>
                 </div>
                 <div className="checkbox-filter">
-                    <label className="checkbox" for="Tourism-in-Egypt"><input  type="checkbox" name="سياحة داخل مصر" value="" id="Tourism-in-Egypt" /><span></span> سياحة داخل مصر</label>
-                    <label className="checkbox" for="Tourism-out-Egypt"><input  type="checkbox" name="سياحة خارج مصر" value="" id="Tourism-out-Egypt" /><span></span> سياحة خارج مصر</label>
+                    <label className="checkbox" for="Tourism-in-Egypt"><input onClick={() => { this.addEgypt(1) }}  type="checkbox" name="سياحة داخل مصر" value="" id="Tourism-in-Egypt" /><span></span> سياحة داخل مصر</label>
+                    <label className="checkbox" for="Tourism-out-Egypt"><input onClick={() => { this.addEgypt(0) }}  type="checkbox" name="سياحة خارج مصر" value="" id="Tourism-out-Egypt" /><span></span> سياحة خارج مصر</label>
                 </div>
                 <div className="checkbox-filter">
                     <label className="checkbox" for="five-star">

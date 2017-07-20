@@ -3,7 +3,7 @@ body { direction: rtl; }
 .header-top { } 
 .header-top ul { font-size: 0; } 
 .header-top ul li { display: inline-block; } 
-.header-top ul li a { font-size: 12px; color: #D9E9FF; line-height: 36px; position: relative; display: block; padding: 0 16px; -webkit-transition: all .2s; -moz-transition: all .2s; -o-transition: all .2s; transition: all .2s; } 
+.header-top ul li a { font-size: 12px; color: #D9E9FF; line-height: 36px; position: relative; display: block; padding: 0 16px; -webkit-transition: all .2s; -moz-transition: all .2s; -o-transition: all .2s; transition: all .2s; font-weight: 600;} 
 .header-top ul li a:hover,.header-top ul li a.active { background-color: #1B55B3; z-index: 1; } 
 .header-top ul li a:before { content: ''; opacity: 0.3; position: absolute; right: 100%; top: 9px; bottom: 9px; border-left: 1px solid #fff; background-color: transparent; -webkit-transition: all .2s; -moz-transition: all .2s; -o-transition: all .2s; transition: all .2s; } 
 .header-top ul li a:hover:before,

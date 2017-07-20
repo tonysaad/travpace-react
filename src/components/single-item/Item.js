@@ -91,6 +91,10 @@ class Item extends Component {
                                 <p>{this.props.info.hotel.description}</p>
                             </div>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1726.1166949101005!2d31.3395858!3d30.0875015!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1500388216736"></iframe>
+                            <p>عنوان الفندق</p>
+                            <h4>سياسة الفندق</h4>
+                            <p>تسجيل الوصول من الساعة 14:00 حتى الساعة 18:00 <br/> تسجيل المغادرة حتى الساعة 12:00 <br/>الحيوانات الأليفة غير مسموح بها</p>
+                            <a href="#" className="hotel-site">موقع الفندق الإلكتروني</a>
                         </div>
 
                     </div>

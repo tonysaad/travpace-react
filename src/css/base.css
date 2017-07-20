@@ -1,4 +1,4 @@
-body { direction: rtl; font-family: 'Cairo', sans-serif; text-align: right; background-color: #fff; } 
+body { direction: rtl; font-family: 'Cairo', sans-serif; text-align: right; background-color: #fff; font-weight: 600; } 
 span { font-family: 'Cairo', sans-serif; } 
 .premium-icon { background-image: url('/img/icons/check-circle.png'); background-repeat: no-repeat; background-position: left center; background-size: 13px; padding-left: 17px; } 
 
@@ -46,7 +46,11 @@ span { font-family: 'Cairo', sans-serif; }
 .travel-included .breakfast-dinner { background-image: url('/img/icons/dinner.png'); background-size: 26px auto; } 
 
 /*basics*/
-.hot-deal { background-image: url('/img/icons/hot-deal.png'); background-size: 14px; background-position: left center; background-repeat: no-repeat; padding-left: 22px; } 
+.hot-deal { background-image: url('/img/icons/hot-deal.png'); background-size: 14px; background-position: right 10px; background-repeat: no-repeat; padding-right: 18px; position: relative; } 
+.hot-deal::before { content: ''; position: absolute; bottom: 100%; right: 2px; margin-bottom: -15px; border: solid transparent; height: 0; width: 0; pointer-events: none; border-color: rgba(136, 183, 213, 0); border-top-color: #F5A623; border-width: 5px; -webkit-transition: all .2s; -o-transition: all .2s; transition: all .2s; opacity: 0; } 
+.hot-deal::after { content:'عرض ساخن'; position: absolute; position: relative; font-size: 10px; background: #F5A623; border-radius: 2px; color: #403322; position: absolute; padding: 0px 10px; bottom: 100%; right: -24px; opacity: 0; pointer-events: none; -webkit-transition: all .2s; -o-transition: all .2s; transition: all .2s; margin-bottom: -5px; font-weight: 600; } 
+.hot-deal:hover::before { opacity: 1; } 
+.hot-deal:hover::after { opacity: 1; } 
 .HomePage .container { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: flex; -webkit-flex-flow: row wrap; flex-flow: row wrap; padding: 0 20px; } 
 .HomePage .container .right-side { flex-basis: 250px; flex-grow: 0; flex-shrink: 1; } 
 .HomePage .container .left-side { flex-grow: 1; flex-shrink: 1; flex-basis: calc(100% - 250px); padding:20px 30px 0; margin-bottom: 50px; } 
@@ -142,16 +146,43 @@ span { font-family: 'Cairo', sans-serif; }
 .list-prices li .price h3 { font-size: 24px; font-weight: 700; line-height: 1; } 
 
 .no-scroll { overflow: hidden; } 
-.trip-left-side .btn { background: #00A651; border-radius: 4px; display: block; width: 100%; font-size: 18px; color: #FFFFFF; font-weight: 600; line-height: 60px; text-align: center; margin-top: 16px; } 
-
+.trip-left-side .btn { background: #00A651; border-radius: 4px; display: block; width: 100%; font-size: 18px; color: #FFFFFF; font-weight: 600; line-height: 60px; text-align: center; margin-top: 16px;transition: all .2s;} 
+.trip-left-side .btn:hover{background: #009951;}
 .DayPicker,.transition-container { width: 100% !important; height: auto !important; } 
 .transition-container { padding: 20px; } 
 .CalendarMonthGrid { position: static !important; width: 100% !important; text-align: center; } 
 .CalendarMonth { position: static !important; } 
-.CalendarMonth--horizontal:first-of-type { display: none; }
+.CalendarMonth--horizontal:first-of-type { display: none; } 
 .DayPickerNavigation--horizontal { position: static; } 
 .DayPickerNavigation--horizontal .DayPickerNavigation__prev, .DayPickerNavigation--horizontal .DayPickerNavigation__next { background: rgba(193, 201, 210, 0.2); border-radius: 2px; width: 32px; height: 100px; border: none; top: 50%; position: relative; position: absolute; margin-top: -50px; } 
 .DayPickerNavigation--horizontal .DayPickerNavigation__prev svg, .DayPickerNavigation--horizontal .DayPickerNavigation__next svg { display: none; } 
 .DayPickerNavigation--horizontal .DayPickerNavigation__prev::before, .DayPickerNavigation--horizontal .DayPickerNavigation__next::before { content:''; background-image: url('/img/icons/arrow-right-grey.png'); position: absolute; left: 0; right: 0; top: 0; bottom: 0; background-size: 10px; background-position: center; background-repeat: no-repeat; } 
-.DayPickerNavigation--horizontal .DayPickerNavigation__next::before{-webkit-transform: rotate(180deg);-ms-transform: rotate(180deg);transform: rotate(180deg);}
-.CalendarDay{    border: none;margin: 4px;padding: 7px;box-sizing: border-box;}
+.DayPickerNavigation--horizontal .DayPickerNavigation__next::before { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); } 
+.CalendarDay { border: none; margin: 4px; padding: 7px; box-sizing: border-box; } 
+
+
+/* Animation */
+@keyframes slideInFromLeft { 
+ 0% { transform: translateX(50%); opacity:0; } 
+ 100% { transform: translateX(0); opacity:1; } 
+ }
+.right-side { /* animation: 1s ease-out .5s 1 slideInFromLeft; */
+ animation-name: slideInFromLeft; animation-timing-function: ease-in-out; animation-delay: 1.4s; animation-iteration-count: 1; animation-fill-mode:forwards; animation-duration: .6s; opacity: 0; } 
+
+@keyframes HeaderTop { 
+ 0% { transform: translateY(-10%); opacity:0; } 
+ 100% { transform: translateY(0); opacity:1; } 
+ }
+.header-top { animation-name: HeaderTop; animation-timing-function: ease-in-out; animation-delay: 1s; animation-iteration-count: 1; animation-fill-mode:forwards; animation-duration: .6s; opacity: 0; } 
+
+@keyframes HeaderBottom { 
+ 0% { opacity:0; } 
+ 100% { opacity:1; } 
+ }
+.header-bottom { animation-name: HeaderBottom; animation-timing-function: ease-in-out; animation-delay: 1.2s; animation-iteration-count: 1; animation-fill-mode:forwards; animation-duration: .6s; opacity: 0; } 
+
+@keyframes ListData { 
+ 0% { opacity:0; } 
+ 100% { opacity:1; } 
+ }
+.left-side { animation-name: ListData; animation-timing-function: ease-in-out; animation-delay: 1.6s; animation-iteration-count: 1; animation-fill-mode:forwards; animation-duration: .6s; opacity: 0; } 

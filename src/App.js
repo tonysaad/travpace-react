@@ -1,17 +1,9 @@
 import React from 'react';
-// import AgencyDetails from './components/AgencyDetails';
-// import BookNum from './components/BookNum';
-// import TravelIncluded from './components/TravelIncluded';
 import Header from './components/Header';
 import ListPaginationWrapper from './components/list-pagination-wrapper/ListPaginationWrapper';
-// import QRHeader from './components/QRHeader';
-// import Label from './components/Label';
-// import ListPrices from './components/ListPrices';
-// import TravelDates from './components/TravelDates';
 import Book from './components/booking-page/Book';
 import Thanks from './components/thanks-page/Thanks';
 import SinglePage from './components/single-item/SinglePage';
-// import Carousel from 'react-image-carousel';
 import './css/reset.css';
 import './css/base.css';
 import {
