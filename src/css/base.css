@@ -1,7 +1,7 @@
 body { direction: rtl; font-family: 'Cairo', sans-serif; text-align: right; background-color: #fff; font-weight: 600; } 
 span { font-family: 'Cairo', sans-serif; } 
-.premium-icon { background-image: url('/img/icons/check-circle.png'); background-repeat: no-repeat; background-position: left center; background-size: 13px; padding-left: 17px; } 
-
+.premium-icon {  background-repeat: no-repeat; background-position: left center; background-size: 13px; padding-left: 17px; } 
+.premium-chip{background-image: url('/img/icons/check-circle.png'); }
 /*starts*/
 .starts { height: 26px; font-size: 0; } 
 .starts i { width: 16px; height: 16px; display: inline-block; background-image: url('/img/icons/star.png'); background-size: cover; background-repeat: no-repeat; background-position: center; vertical-align: middle; margin-left: 3px; } 

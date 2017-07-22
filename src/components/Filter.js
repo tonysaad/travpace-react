@@ -61,7 +61,7 @@ class Filter extends Component {
              this.props.updateFilters({"days_gte":5})
         }
         else
-            this.props.updateFilters({"days_gte":''})
+            this.props.updateFilters({"days_gte":[]})
 
         this.setState({ longTrip: !this.state.longTrip });
     }  
@@ -70,10 +70,18 @@ class Filter extends Component {
         if (!this.state.shortTrip)
              this.props.updateFilters({"days_lte":4})
         else
-            this.props.updateFilters({"days_lte":''})
+            this.props.updateFilters({"days_lte":[]})
         this.setState({ shortTrip: !this.state.shortTrip });
     }
     
+    premiumOnly = () => {
+        if (!this.state.premium)
+             this.props.updateFilters({"agency.isPremium":true})
+        else
+             this.props.updateFilters({"agency.isPremium":[]})
+        this.setState({ premium: !this.state.premium });
+    }
+
     addEgypt = (inEgypt) => {
         let newInEgyptList = [...this.state.inEgypt];
         let index = this.state.inEgypt.indexOf(inEgypt);
@@ -91,7 +99,7 @@ class Filter extends Component {
             <div className="right-filter">
                 <div className="toggle-btns">
                     <label for="toggle-premium">
-                        <input type="checkbox" name="toggle-premium" id="toggle-premium" />
+                        <input onClick={() => { this.premiumOnly() }} type="checkbox" name="toggle-premium" id="toggle-premium" />
                         <span className="toggle-switch"></span>
                         <span className="premium-icon ">شركات سياحة <em>PREMIUM</em> فقط</span>
                     </label>
