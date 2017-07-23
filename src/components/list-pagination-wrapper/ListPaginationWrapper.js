@@ -5,7 +5,7 @@ import Pagination from '../Pagination';
 import TitleCity from '../TitleCity';
 import SingleItem from '../single-item/SingleItem';
 import Filter from '../Filter';
-import Header from '../Header';
+import Search from '../Search';
 
 class ListPaginationWrapper extends Component {
   constructor(props) {
@@ -93,7 +93,7 @@ class ListPaginationWrapper extends Component {
     let popup = (this.state.popupToggle) ? (<SingleItem info={this.state.list[this.state.popupIndex]} popupFunction={this.populateAndTogglePopup} switchPopup={this.switchPopup} />) : '';
     return (
       <div className="HomePage">
-        <Header updateFilters={this.getList} />
+        <Search updateFilters={this.getList} />
         <div className="container">
           <div className="right-side">
             <div className="sponsored">

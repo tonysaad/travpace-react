@@ -1,7 +1,7 @@
 body { direction: rtl; font-family: 'Cairo', sans-serif; text-align: right; background-color: #fff; font-weight: 600; } 
 span { font-family: 'Cairo', sans-serif; } 
-.premium-icon {  background-repeat: no-repeat; background-position: left center; background-size: 13px; padding-left: 17px; } 
-.premium-chip{background-image: url('/img/icons/check-circle.png'); }
+.premium-icon { background-image: url('/img/icons/check-circle.png'); background-repeat: no-repeat; background-position: left center; background-size: 13px; padding-left: 17px; } 
+
 /*starts*/
 .starts { height: 26px; font-size: 0; } 
 .starts i { width: 16px; height: 16px; display: inline-block; background-image: url('/img/icons/star.png'); background-size: cover; background-repeat: no-repeat; background-position: center; vertical-align: middle; margin-left: 3px; } 
@@ -33,7 +33,7 @@ span { font-family: 'Cairo', sans-serif; }
 
 /*Sale Widget*/
 .sale-widget { display: inline-block; font-family: 'Cairo', sans-serif; margin-top: -15px; } 
-.sale-widget img { display: inline-block; width: 18px; } 
+.sale-widget img { display: inline-block; width: 18px;margin: 0 10px 0 5px;}
 .sale-widget div { display: inline-block; } 
 .sale-widget div span { color: #EA0E4D; font-size: 12px; line-height: 12px; font-weight: 300; } 
 .sale-widget div p { font-size: 11px; color: #EA0E4D; line-height: 16px; font-weight: 700; } 
@@ -186,3 +186,6 @@ span { font-family: 'Cairo', sans-serif; }
  100% { opacity:1; } 
  }
 .left-side { animation-name: ListData; animation-timing-function: ease-in-out; animation-delay: 1.6s; animation-iteration-count: 1; animation-fill-mode:forwards; animation-duration: .6s; opacity: 0; } 
+
+.HomePage{position: relative;}
+.HomePage .search-sec{position: absolute;left: 50%;transform: translate(-50%,0);top: -80px;}

@@ -9,11 +9,11 @@ body { direction: rtl; }
 .header-top ul li a:hover:before,
 .header-top ul li a.active:before { opacity: 0; } 
 .header-top ul li:last-child a:before { display: none; } 
-.header-bottom { display: flex; justify-content: space-between; padding: 14px 20px; align-items: center; } 
+.header-bottom { display: flex; justify-content: space-between; padding: 14px 20px; align-items: center;border-bottom: 1px solid #E5EBF1;}
 .header-bottom .company-logo { } 
 .header-bottom .company-logo img { display: block; } 
-.header-bottom .search-sec { font-size: 0; } 
-.header-bottom .search-sec .select-sec { display: inline-block; margin-left: 9px; } 
+.search-sec { font-size: 0; } 
+.search-sec .select-sec { display: inline-block; margin-left: 9px; }
 .select-sec label {  font-size: 11px; color: #798694; line-height: 2; } 
 .select-sec select { -webkit-appearance: none; -moz-appearance: none; appearance: none;  font-size: 13px; color: #000000; line-height: 26px; background: #FFFFFF; border: 1px solid #C1C9D2; box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.15); border-radius: 4px; line-height: 40px; padding: 0 17px; min-width: 144px; background-image: url('/img/icons/arrow-down.png'); background-repeat: no-repeat; background-position: 10px center; cursor: pointer; background-size: 10px; } 
 .select-sec select[name="destination"] { width: 308px; } 

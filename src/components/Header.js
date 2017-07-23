@@ -72,25 +72,7 @@ class Header extends Component {
                     <div className="company-logo">
                         <img src="/img/logo.jpg" alt="company-logo" />
                     </div>
-                    <form className="search-sec">
-                        <div className="select-sec">
-                            <label htmlFor="destination">الوجهة السياحية</label>
-                            <select onChange={this.addDestination} value={this.state.value} name="destination">
-                                <option value="شرم الشيخ">شرم الشيخ</option>
-                                <option value="الغردقة">الغردقة</option>
-                            </select>
-                        </div>
-                        <div className="select-sec">
-                            <label htmlFor="month">الشهر المفضل للسفر</label>
-                            <select name="month">
-                                <option value="1">يناير ٢٠١٧</option>
-                                <option value="2">فبراير ٢٠١٧</option>
-                            </select>
-                        </div>
-                        <div className="select-btn">
-                            <input type="submit" value="بحث" className="btn btn-search" />
-                        </div>
-                    </form>
+
                     <div className="account">
                         <img src="/img/account.jpg" alt="account-profile" />
                         <div className="details">
