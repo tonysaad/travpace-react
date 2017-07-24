@@ -18,7 +18,7 @@ class ListPaginationWrapper extends Component {
       // popupData: '',
       popupIndex: -1
     };
-    this.url = "http://localhost:4321/deals-and-packages";
+    this.url = "http://thebackendcrew.com:8888/deals-and-packages";
   }
   updateState = (list, filters, totalCount) => {
     this.setState({ list, filters, totalCount });

@@ -40,7 +40,7 @@ class Book extends Component {
         <form className="booking-content" >
           <div className="booking-form">
             <PackageInfo info={this.state.info}/>
-            <ChooseDate />
+            <ChooseDate days={this.state.info.days} />
             <RoomPrices />
             <ChildrenNum />
             <Transportation />
