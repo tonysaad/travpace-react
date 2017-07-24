@@ -1,11 +1,11 @@
-.booking-content { background-color: #FAFAFA; padding: 15px 25px 100px;display: flex;} 
-.booking-form{    margin-left: 40px;}
+.booking-content { background-color: #FAFAFA; padding: 15px 25px 100px; display: flex; } 
+.booking-form { margin-left: 40px; } 
 .booking-form>div { margin-top: 20px; } 
-.booking-form>div:first-child{margin-top: 0;}
+.booking-form>div:first-child { margin-top: 0; } 
 .booking-small-head { color: #fff; background: #262C32; border-radius: 4px 4px 0 0; display: flex; padding: 5px 14px; justify-content: space-between; } 
 .booking-small-head h3 { font-size: 14px; font-weight: 700; } 
 .booking-small-head span { font-size: 12px; font-weight: 300; } 
-.booking-text-content { border-radius: 0 0 4px 4px; background-color: #fff; box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10);position: relative;}
+.booking-text-content { border-radius: 0 0 4px 4px; background-color: #fff; box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10); position: relative; } 
 .select-item { border-top: 1px solid #DCDEE0; } 
 .select-item:first-child { border: none; } 
 
@@ -19,7 +19,7 @@
 .PackageInfo .content .Info h2 { font-weight: 700; font-size: 20px; line-height: 1.4; margin-top: 4px; } 
 .PackageInfo .content .Info .travel-included { margin: 10px 0 0; } 
 .PackageInfo .content .agency-details-Booking { border: none; padding: 0; flex-grow: 1; flex-shrink: 1; flex-basis: 100%; margin: 0; align-self: flex-end; } 
-.PackageInfo .content .agency-details-Booking .pic { vertical-align: middle; display: inline-block; background: #FFFFFF; border: 1px solid #DCDEE0; border-radius: 2px; width: 88px; height: 66px; text-align: center;display: inline-flex;align-items: center;} 
+.PackageInfo .content .agency-details-Booking .pic { vertical-align: middle; display: inline-block; background: #FFFFFF; border: 1px solid #DCDEE0; border-radius: 2px; width: 88px; height: 66px; text-align: center; display: inline-flex; align-items: center; } 
 .PackageInfo .content .agency-details-Booking .pic img { max-height: 100%; } 
 .PackageInfo .content .agency-details-Booking .details { vertical-align: middle; display: inline-block; padding-right: 10px; font-size: 0; } 
 .PackageInfo .content .agency-details-Booking .details p { font-family: 'Cairo', sans-serif; font-size: 11px; color: #000000; font-style: normal; font-weight: 300; } 
@@ -83,11 +83,11 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; } 
 .CustomerData .entry-form .form-group textarea { max-width: none; height: 200px; resize: none; line-height: 1.5; border-radius: 2px; } 
 .CustomerData .entry-form hr { border: 1px solid #E5EBF1; margin: 30px 0 20px; } 
-.CustomerData .entry-form input[type=submit],.CustomerData .entry-form .submit { background: #00A651; border-radius: 4px; font-size: 18px; color: #FFFFFF; font-weight: 700; box-shadow: none; border: none; line-height: 60px; padding: 0; max-width: 300px; cursor: pointer; -webkit-appearance: none; transition: .2s all ease-in-out; display: block;text-align: center;} 
+.CustomerData .entry-form input[type=submit],.CustomerData .entry-form .submit { background: #00A651; border-radius: 4px; font-size: 18px; color: #FFFFFF; font-weight: 700; box-shadow: none; border: none; line-height: 60px; padding: 0; max-width: 300px; cursor: pointer; -webkit-appearance: none; transition: .2s all ease-in-out; display: block; text-align: center; } 
 .CustomerData .entry-form input[type=submit]:hover { background: #00994a; } 
 
 /*PriceTotla*/
-.PriceTotla {width: 300px;margin-top: 20px;}
+.PriceTotla { width: 300px; margin-top: 20px; } 
 .PriceTotla .head { position: relative; background: #1B5EC9; border-radius: 4px 4px 0 0; color: #fff; font-size: 0; padding: 10px 20px; } 
 .PriceTotla .head h5 { font-size: 12px; font-weight: 600; margin-bottom: -2px; } 
 .PriceTotla .head h2 { font-size: 24px; font-weight: 700; line-height: 1.3; } 
@@ -102,9 +102,27 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin
 .PriceTotla .content .details h4 { font-size: 12px; font-weight: 700; line-height: 1.5; } 
 .PriceTotla .content .details p { font-size: 12px; font-weight: 400; line-height: 1.5; } 
 .PriceTotla .content .price { margin-right: auto; } 
-.PriceTotla .content .price h4,.PriceTotla .content .price.free h3,.PriceTotla .content .price.free span{display: none;}
-.PriceTotla .content .price.free h4{color: #00A651; font-size: 14px; font-weight: 700;display: block}
+.PriceTotla .content .price h4,.PriceTotla .content .price.free h3,.PriceTotla .content .price.free span { display: none; } 
+.PriceTotla .content .price.free h4 { color: #00A651; font-size: 14px; font-weight: 700; display: block } 
 .PriceTotla .content .price h3 { font-size: 18px; font-weight: 700; display: inline-block; vertical-align: middle; } 
 .PriceTotla .content .price span { font-size: 12px; display: inline-block; vertical-align: middle; padding-right: 5px; } 
-.price-total .sticky{margin-top: 20px;}
-.price-total .sticky .PriceTotla{margin: 0;}
+.price-total .sticky { margin-top: 20px; } 
+.price-total .sticky .PriceTotla { margin: 0; } 
+
+.dateRange { direction: ltr; outline: none; } 
+.dateRange .DayPicker-Day { border: 1px solid rgba(193, 201, 210, 0.5); border-radius: 2px; margin: 2px; padding: 0 7px; color: rgba(10, 10, 23, 0.5); font-size: 17px; line-height: 34px; font-weight: 700; outline: none; position: relative; } 
+.dateRange .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) { opacity: 1; background-color: #C1C9D2; color: #0a0a17; border-color: #C1C9D2; } 
+.dateRange .DayPicker-Month { border-collapse: separate; border-spacing: 5px; } 
+.dateRange .DayPicker-Day--outside { border: none; pointer-events: none;position: static;}
+.dateRange .DayPicker-Day--outside::before,.dateRange .DayPicker-Day--outside::after{display: none;}
+.dateRange .DayPicker-NavButton { background: rgba(193, 201, 210, 0.2); border-radius: 2px; width: 32px; height: 100px; border: none; top: 50%; position: relative; position: absolute; margin-top: -50px; outline: none; } 
+.dateRange .DayPicker-NavButton::before { content:''; background-image: url('/img/icons/arrow-right-grey.png'); position: absolute; left: 0; right: 0; top: 0; bottom: 0; background-size: 10px; background-position: center; background-repeat: no-repeat; } 
+.dateRange .DayPicker-NavButton--next::before { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); } 
+.dateRange .DayPicker-NavBar { position: static; } 
+.dateRange .DayPicker-Day[aria-selected="false"]+.DayPicker-Day[aria-selected="true"] { background-color: #00A651; color: #fff; border-color: #B8E986; } 
+.dateRange .DayPicker-Day::before { content:"مباع بالكامل"; position: absolute; font-size: 10px; width: 64px; line-height: 16px; background-color: #FB251A; border-radius: 2px; color: #fff; opacity: 0; z-index: 1; bottom: 100%; right: 100%; margin-right: -5px; margin-bottom: -5px;transition: .2s all ease-in-out;} 
+.dateRange .DayPicker-Day:hover::before { opacity: 1; } 
+.dateRange .DayPicker-Day::after{content:'';position: absolute;top: 2px;left: 2px;width: 5px;height: 5px;border-radius: 50%;background: #FB251A;}
+.dateRange .DayPicker-Weekday{font-size: 11px;color: #798694;}
+.dateRange .DayPicker-Weekday abbr{text-decoration: none;}
+.dateRange .DayPicker-Caption{color:#45464A;font-size: 14px;}
