@@ -141,6 +141,8 @@ class ListPaginationWrapper extends Component {
   render() {
     let popup = (this.state.popupToggle) ? (<SingleItem info={this.state.list[this.state.popupIndex]} popupFunction={this.populateAndTogglePopup} switchPopup={this.switchPopup} />) : '';
     let loader = (this.state.showLoader) ? (<Loader type="ball-clip-rotate" active />) : (<span onClick={() => { this.addItems() }}>Load More</span>);
+    if(this.state.filters._page * 48 >= this.state.totalCount )
+      loader = "";
     return (
       <div className="HomePage">
         <Header updateFilters={this.getList} />
