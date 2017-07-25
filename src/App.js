@@ -3,6 +3,8 @@ import ListPaginationWrapper from './components/list-pagination-wrapper/ListPagi
 import Book from './components/booking-page/Book';
 import Thanks from './components/thanks-page/Thanks';
 import SinglePage from './components/single-item/SinglePage';
+import Header from './components/Header';
+
 import './css/reset.css';
 import './css/base.css';
 import {
@@ -18,6 +20,7 @@ const App = () => (
 
   <Router>
     <div>
+      {/* <Header/> */}
       <Route exact path="/" component={Home} />
       <Route exact path="/:id" component={(match) => <SinglePage params={match.match.params} />} />
       <Route exact path="/book/:id" component={(match) => <Book params={match.match.params} />} />

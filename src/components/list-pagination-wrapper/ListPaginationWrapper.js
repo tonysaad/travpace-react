@@ -6,22 +6,34 @@ import TitleCity from '../TitleCity';
 import SingleItem from '../single-item/SingleItem';
 import Filter from '../Filter';
 import Header from '../Header';
+import { Loader } from 'react-loaders'
 
 class ListPaginationWrapper extends Component {
   constructor(props) {
     super(props);
     this.state = {
       list: [],
-      filters: { "_page": 1, "_limit": 16 },
+      filters: { "_page": 1, "_limit": 48 },
       totalCount: 0,
       popupToggle: false,
+      showOne: false,
+      showTwo: false,
+      showLoader: false,
       // popupData: '',
       popupIndex: -1
     };
-    this.url = "http://localhost:4321/deals-and-packages";
+    this.url = "http://thebackendcrew.com:8888/deals-and-packages";
   }
-  updateState = (list, filters, totalCount) => {
-    this.setState({ list, filters, totalCount });
+  updateState = (list, filters, totalCount, keepListItems) => {
+    if (keepListItems) {
+      window.addEventListener("scroll", this.handleScroll);
+      let oldList = [...this.state.list];
+      let newList = oldList.concat(list);
+//      this.setState({list: newList, filters, totalCount });
+      this.setState({ showOne: false, showTwo: false, list: newList, filters, totalCount });
+    }
+    else
+      this.setState({showOne: false, showTwo: false, list, filters, totalCount });
   };
   changePage = (page) => {
     this.getList({ "_page": page });
@@ -46,11 +58,42 @@ class ListPaginationWrapper extends Component {
     this.setState({ popupToggle, popupIndex })
   }
 
-  componentDidMount() {
-    this.getList({});
+
+
+  handleScroll = () => {
+    const windowHeight = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
+    const body = document.body;
+    const html = document.documentElement;
+    const docHeight = 0.9 * Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+    const windowBottom = windowHeight + window.pageYOffset;
+    if (windowBottom >= docHeight && this.state.filters._page * 16 < this.state.totalCount) {
+      if (this.state.showOne) {
+        if (this.state.showTwo) {
+          this.setState({ showLoader: false });
+        }
+        else {
+          this.setState({ showLoader: true });
+          setTimeout(() => { this.setState({ showLoader: false, showTwo: true }) }, 1000);
+        }
+      }
+      else {
+        this.setState({ showLoader: true })
+        setTimeout(() => { this.setState({ showLoader: false, showOne: true }) }, 1000)
+      }
+    }
   }
 
-  getList = (newFilters) => {
+  componentDidMount() {
+    this.getList({});
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  getList = (newFilters, keepListItems = false) => {
     let allFilters = { ...this.state.filters };
     for (let key in newFilters)
       allFilters[key] = newFilters[key];
@@ -68,9 +111,15 @@ class ListPaginationWrapper extends Component {
     });
     console.log(tempURL);
     axios.get(tempURL).then(response => {
-      this.updateState(response.data, allFilters, response.headers["x-total-count"]);
+      this.updateState(response.data, allFilters, response.headers["x-total-count"], keepListItems);
     });
   };
+
+  addItems = () => {
+    this.setState({showLoader:true});
+    window.removeEventListener("scroll", this.handleScroll);
+    this.getList({ "_page": this.state.filters._page + 1 }, true);
+  }
 
   //   getList = (newFilters) => {
   //   let allFilters = { ...this.state.filters };
@@ -91,6 +140,7 @@ class ListPaginationWrapper extends Component {
 
   render() {
     let popup = (this.state.popupToggle) ? (<SingleItem info={this.state.list[this.state.popupIndex]} popupFunction={this.populateAndTogglePopup} switchPopup={this.switchPopup} />) : '';
+    let loader = (this.state.showLoader) ? (<Loader type="ball-clip-rotate" active />) : (<span onClick={() => { this.addItems() }}>Load More</span>);
     return (
       <div className="HomePage">
         <Header updateFilters={this.getList} />
@@ -104,8 +154,9 @@ class ListPaginationWrapper extends Component {
           </div>
           <div className="left-side">
             <TitleCity />
-            <ListView popupFunction={this.populateAndTogglePopup} list={this.state.list} />
-            <Pagination totalItems={this.state.totalCount} changePage={this.changePage} />
+            <ListView showAfter={(this.state.filters._page-1)*48 + 16 - 1} showAfterTwo={(this.state.filters._page-1)*48 + 32 - 1} showOne={this.state.showOne} showTwo={this.state.showTwo} popupFunction={this.populateAndTogglePopup} list={this.state.list} />
+            {loader}
+            {/* <Pagination totalItems={this.state.totalCount} changePage={this.changePage} /> */}
             {popup}
           </div>
           <div className="sponsored middle">
