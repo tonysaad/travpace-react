@@ -65,3 +65,7 @@
 .list-view.rows-02 .default-widget .price{font-size: 0;}
 .list-view.rows-02 .widget-hotel-foot .price>span{margin-bottom: 6px;}
 .list-view.rows-02 .hotel-label{position: absolute;bottom: 0;right: 0;/* Rectangle 2: */box-shadow: -3px -1px 4px 0 rgba(0,0,0,0.20);}
+
+@media screen and (max-width:711px){
+    .visibility-watch{display: none;}
+}
