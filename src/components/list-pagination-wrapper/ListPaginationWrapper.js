@@ -5,6 +5,7 @@ import Pagination from '../Pagination';
 import TitleCity from '../TitleCity';
 import SingleItem from '../single-item/SingleItem';
 import Filter from '../Filter';
+import Search from '../Search';
 
 class ListPaginationWrapper extends Component {
   constructor(props) {
@@ -91,23 +92,26 @@ class ListPaginationWrapper extends Component {
   render() {
     let popup = (this.state.popupToggle) ? (<SingleItem info={this.state.list[this.state.popupIndex]} popupFunction={this.populateAndTogglePopup} switchPopup={this.switchPopup} />) : '';
     return (
-      <div className="container">
-        <div className="right-side">
-          <div className="sponsored">
-            <span>برعاية</span>
-            <img src="/img/right-sponsored.png" alt="sponsored" />
+      <div className="HomePage">
+        <Search updateFilters={this.getList} />
+        <div className="container">
+          <div className="right-side">
+            <div className="sponsored">
+              <span>برعاية</span>
+              <img src="/img/right-sponsored.png" alt="sponsored" />
+            </div>
+            <Filter updateFilters={this.getList} />
           </div>
-          <Filter updateFilters={this.getList} />
-        </div>
-        <div className="left-side">
-          <TitleCity />
-          <ListView popupFunction={this.populateAndTogglePopup} list={this.state.list} />
-          <Pagination totalItems={this.state.totalCount} changePage={this.changePage} />
-          {popup}
-        </div>
-        <div className="sponsored middle">
-          <span>برعاية</span>
-          <img src="/img/middle-sponsored.png" alt="sponsored" />
+          <div className="left-side">
+            <TitleCity />
+            <ListView popupFunction={this.populateAndTogglePopup} list={this.state.list} />
+            <Pagination totalItems={this.state.totalCount} changePage={this.changePage} />
+            {popup}
+          </div>
+          <div className="sponsored middle">
+            <span>برعاية</span>
+            <img src="/img/middle-sponsored.png" alt="sponsored" />
+          </div>
         </div>
       </div>
 
