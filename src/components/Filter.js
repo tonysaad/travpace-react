@@ -94,6 +94,9 @@ class Filter extends Component {
         this.setState({ inEgypt: newInEgyptList });
     }  
   
+    removeClass = ()=>{
+        document.body.classList.remove('ShowFilterActive');
+    }
     render() {
         return (
             <div className="right-filter">
@@ -172,6 +175,7 @@ class Filter extends Component {
                     <label className="checkbox" for="short-vacation"><input onClick={() => { this.shortTrip() }} type="checkbox" name="أجازة قصيرة" value="" id="short-vacation" /><span></span> أجازة قصيرة</label>
                     <label className="checkbox" for="long-youth"><input onClick={() => { this.longTrip() }} type="checkbox" name="أجازة طويلة" value="" id="long-youth" /><span></span> أجازة طويلة</label>
                 </div>
+                <button className="btn btn-filter"  onClick={()=>{this.removeClass()}}>تصفية النتائج</button>
             </div>
         );
     }

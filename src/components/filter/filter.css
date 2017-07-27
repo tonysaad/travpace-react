@@ -1,31 +1,18 @@
 .right-filter { max-width: 340px; } 
-
 .right-filter>div { border-top: 1px solid #E5EBF1; padding: 16px 0; } 
-
 .right-filter>div:first-child { border: none; } 
-
 .toggle-btns input { display: none; } 
-
 .toggle-btns span+span { font-size: 12px; color: #000000; line-height: 26px; display: inline-block; vertical-align: middle; } 
-
 .toggle-btns .toggle-switch { display: inline-block; cursor: pointer; vertical-align: middle; padding: 0; transition: all 0.3s ease-in; margin: 0; width: 38px; height: 20px; background: #E5EBF1; border-radius: 10px; position: relative; margin-left: 10px; } 
-
 .toggle-btns .toggle-switch:before { content: ""; display: block; margin: 0; position: absolute; top: 3px; right: 21px; border-radius: 50%; transition: all 0.2s ease-in 0s; width: 14px; height: 14px; background: #8698A9; } 
-
 .toggle-btns input:checked+.toggle-switch { background-color: #00a651; transition: border 0.4s, box-shadow 0.4s, background-color 1.2s; } 
-
 .toggle-btns input:checked+.toggle-switch:before { right: 3px; background-color: #E5EBF1; } 
-
 .checkbox-filter .checkbox { position: relative; font-size: 12px; color: #000000; line-height: 26px; padding-right: 25px; cursor: pointer; display: table; } 
-
 .checkbox-filter .checkbox~.checkbox { margin-top: 7px; } 
-
 .checkbox-filter input { display: none; } 
-
 .checkbox-filter span { position: relative; position: absolute; top: 5px; right: 0; width: 16px; height: 16px; border: 1px solid #798694; border-radius: 0; box-sizing: border-box; transition-duration: 0.2s; pointer-events: none; -webkit-transition: all .2s; -moz-transition: all .2s; -o-transition: all .2s; transition: all .2s; } 
-
 .checkbox-filter input:checked+span { border-color: #1B5EC9; } 
-
 .checkbox-filter span:before { content: ''; position: absolute; top: 0; right: 0; left: 0; bottom: 0; background-image: url('/img/icons/checkbox-selected.png'); background-repeat: no-repeat; background-size: 10px; background-position: center; opacity: 0; -webkit-transition: all .2s; -moz-transition: all .2s; -o-transition: all .2s; transition: all .2s; } 
-
 .checkbox-filter input:checked+span:before { opacity: 1; } 
+.btn-filter{background-color: #1B5EC9;width: 100%;border-radius: 4px;color: #fff;font-size: 18px;line-height: 60px;}
+.btn-filter:hover{background-color: #1b5eb5;}
