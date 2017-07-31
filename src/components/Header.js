@@ -87,7 +87,7 @@ class Header extends Component {
                 </div>
                 <div className="header-bottom">
                     <div className="company-logo">
-                        <img src="/img/logo.jpg" alt="company-logo" />
+                        <Link to="/"><img src="/img/logo.jpg" alt="company-logo" /></Link>
                     </div>
 
                     <div className="account">
