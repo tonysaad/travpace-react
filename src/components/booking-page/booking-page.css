@@ -134,3 +134,10 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin
     .PriceTotla{position: fixed;top:100%;width: auto;left: 0;right: 0;margin-top: -94px;z-index: 1;}
     .price-total > div > div {transform:none !important;}
 }
+@media screen and (max-width:767px) {
+    .PackageInfo{display: block;}
+    .PackageInfo > .pic{margin: 0;}
+    .select-item-rooms{display: block;}
+    .select-item-rooms .price,.select-item-rooms .select-sec{margin-right: 0;}
+    .select-item-rooms .room-type,.select-item-rooms .sale-widget,.select-item-rooms .price{margin-bottom: 10px;}
+}
