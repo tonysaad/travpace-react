@@ -17,24 +17,32 @@ import {
 class Book extends Component {
     constructor(props) {
       super(props);
-    this.state = {
-      info:''
-    };
+      this.state = {
+        info:'',
+        isActive: false
+      };
   }
 
   componentDidMount() {
     document.body.classList.toggle('no-scroll', false)
     axios.get(`http://thebackendcrew.com:8888/deals-and-packages/${this.props.params.id}`).then(response => {
       this.setState({
-        info:response.data
+        info:response.data,
       })
     });
   }
+
+
+    toggleClasses = ()=>{
+        // document.body.classList.toggle('no-scroll', !this.state.isActive);
+        this.setState({isActive: !this.state.isActive});
+    }
 
   render() {
     if(this.state.info === ''){
       return null;
     }
+        let priceClass = (this.state.isActive)? "active" : "test";
     return (
       <div className="container">
         <form className="booking-content" >
@@ -48,7 +56,7 @@ class Book extends Component {
           </div>
           <div className="price-total">
             <Sticky bottomOffset={80}>
-              <PriceTotla />
+              <PriceTotla onClick={()=>{this.toggleClasses()}} className={priceClass}/>
             </Sticky>
           </div>
         </form>

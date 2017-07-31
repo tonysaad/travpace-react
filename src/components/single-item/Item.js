@@ -9,6 +9,7 @@ import HotelFeatures from './HotelFeatures';
 import Label from '../Label';
 import TravelDates from '../TravelDates';
 import AgencyDetails from '../AgencyDetails';
+import FavBtn from '../FavBtn';
 
 class Item extends Component {
 
@@ -73,6 +74,65 @@ class Item extends Component {
                 <div className="head">
                     <QRHeader info={this.props.info}  liked={this.props.liked} toggleLike={this.props.toggleLike}/>
                 </div>
+
+                <div className="show-mobile">
+                    <div className="img-carousel">
+                        <Carousel images={images} thumb={true} loop={true} />
+                    </div>
+
+                    <div className="travel-includ-btn">
+                        <TravelIncluded days={this.props.info.days} mealPlan={this.props.info.mealPlan} />
+                        <FavBtn  liked={this.props.liked} toggleLike={this.props.toggleLike}/>
+                    </div>
+
+                    <div className="list-prices">
+                        <div className="select-sec">
+                            <select name="room-views-month">
+                                <option value="1">العرض ساري من ١ مايو ٢٠١٧  حتي 15 مايو ٢٠١٧</option>
+                                <option value="2">العرض ساري من ١ سبتمبر ٢٠١٧  حتي 15 سبتمبر ٢٠١٧</option>
+                            </select>
+                        </div>
+                        <ul>
+                            <ListPrices />
+                            <ListPrices />
+                            <ListPrices />
+                        </ul>
+                    </div>
+
+                    <Link to={"/book/" + this.props.info.id} className="btn">أحجز الآن</Link>
+
+                    <div className="labels">
+                        <Label />
+                        <Label />
+                    </div>
+                    
+                        <div className="trip-data">
+                            <div className="item">
+                                <p>{this.props.info.hotel.description}</p>
+                            </div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1726.1166949101005!2d31.3395858!3d30.0875015!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1500388216736"></iframe>
+                            <p>عنوان الفندق</p>
+                            <h4>سياسة الفندق</h4>
+                            <p>تسجيل الوصول من الساعة 14:00 حتى الساعة 18:00 <br/> تسجيل المغادرة حتى الساعة 12:00 <br/>الحيوانات الأليفة غير مسموح بها</p>
+                            <a href="#" className="hotel-site">موقع الفندق الإلكتروني</a>
+                        </div>
+
+                    <HotelFeatures features={this.props.info.hotel.features} />
+
+                    <Link to={"/book/" + this.props.info.id} className="btn">أحجز الآن</Link>
+
+                    <AgencyDetails agency={this.props.info.agency} />
+
+                    <div className="extra-logos">
+                        <img src="img/icons/logo-01.png" alt="" />
+                        <img src="img/icons/logo-01.png" alt="" />
+                    </div>
+                    <div className="sponsored">
+                        <span>برعاية</span>
+                        <img src="/img/right-sponsored.png" alt="sponsored" />
+                    </div>
+                </div>
+
                 <div className="trip-content">
                     <div className="trip-right-side">
                         <div className="img-carousel">
