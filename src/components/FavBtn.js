@@ -5,7 +5,7 @@ class FavBtn extends Component {
   render() {
     return (
 
-        <button type="button" onClick={(event)=>{this.props.toggleLike();event.stopPropagation();}} className={(this.props.liked)? 'fav-btn clicked' : 'fav-btn'}><i className='fav-icon'></i><span>12</span></button>
+        <button type="button" onClick={(event)=>{this.props.toggleLike();event.stopPropagation();}} className={(this.props.liked)? 'fav-btn clicked' : 'fav-btn'}><i className='fav-icon'></i></button>
 
     );
   }

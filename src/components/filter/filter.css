@@ -14,5 +14,5 @@
 .checkbox-filter input:checked+span { border-color: #1B5EC9; } 
 .checkbox-filter span:before { content: ''; position: absolute; top: 0; right: 0; left: 0; bottom: 0; background-image: url('/img/icons/checkbox-selected.png'); background-repeat: no-repeat; background-size: 10px; background-position: center; opacity: 0; -webkit-transition: all .2s; -moz-transition: all .2s; -o-transition: all .2s; transition: all .2s; } 
 .checkbox-filter input:checked+span:before { opacity: 1; } 
-.btn-filter{background-color: #1B5EC9;width: 100%;border-radius: 4px;color: #fff;font-size: 18px;line-height: 60px;}
+.btn-filter{background-color: #1B5EC9;width: 100%;border-radius: 4px;color: #fff;font-size: 18px;line-height: 60px;display: none}
 .btn-filter:hover{background-color: #1b5eb5;}
