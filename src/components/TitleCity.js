@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import '../components/title-city/title-city.css';
 
 class TitleCity extends Component {
+    constructor(props) {
+        super(props)
+    }
+
+    addClass = ()=>{
+        document.body.classList.add('ShowFilterActive');
+    }
+
   render() {
     return (
       <div className="title-city-div">
@@ -10,7 +18,7 @@ class TitleCity extends Component {
           <p>يوجد ٢٥٠ عرض فندقي و١٢٠ رحلة سياحية</p>
         </div>
         <div className="actions-sec">
-          <div className="show-filters">تصفية النتائج</div>
+          <div className="show-filters" onClick={()=>{this.addClass()}}>تصفية النتائج</div>
           <div className="sortby select-sec">
             <label for="sortby">رتب حسب</label>
             <select name="sortby">

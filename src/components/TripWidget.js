@@ -58,14 +58,14 @@ class TripWidget extends Component {
         let TripImg2 = this.props.info.featuredImg.thumbnail;
         let premium = (this.props.info.agency.isPremium)? "premium-icon premium-chip" : "premium-icon"
         return (
-            <div className="col"  data-aos="fade">
+            <div className="col">
                 <div onClick={() => { console.log(this.props.key); this.props.popupFunction(true, this.props.index) }} className={!this.state.waiting? 'default-widget hotel-deal' :'default-widget hotel-deal waiting' }>
                     <div className="pic" style={TripImg}>
                         <img onLoad={this.notWaiting.bind(this)} src={TripImg2} />
                     </div>
                     <div>
                         <div className="widget-hotel-content">
-                            <h2 className="hot-deal">{staticTitle + " " + this.props.info.title}
+                            <h2>{staticTitle + " " + this.props.info.title}
                                 {rating}
                             </h2>
                             <p className={premium}>{"عرض من شركة " + this.props.info.agency.name}</p>

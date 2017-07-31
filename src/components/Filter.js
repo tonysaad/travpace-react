@@ -27,7 +27,7 @@ class Filter extends Component {
 
         else
             newRatingList.splice(index, 1);
-        this.props.updateFilters({rating:newRatingList})
+        this.props.updateFilters({_page:1,rating:newRatingList})
         this.setState({ ratings: newRatingList });
     }
 
@@ -39,7 +39,7 @@ class Filter extends Component {
 
         else
             newMealPlanList.splice(index, 1);
-        this.props.updateFilters({mealPlan:newMealPlanList})
+        this.props.updateFilters({_page:1,mealPlan:newMealPlanList})
         this.setState({ mealPlan: newMealPlanList });
     }   
     
@@ -51,34 +51,34 @@ class Filter extends Component {
 
         else
             newTypeList.splice(index, 1);
-        this.props.updateFilters({type:newTypeList})
+        this.props.updateFilters({_page:1,type:newTypeList})
         this.setState({ type: newTypeList });
     }       
 
     longTrip = () => {
         if (!this.state.longTrip){
 
-             this.props.updateFilters({"days_gte":5})
+             this.props.updateFilters({_page:1,"days_gte":5})
         }
         else
-            this.props.updateFilters({"days_gte":[]})
+            this.props.updateFilters({_page:1,"days_gte":[]})
 
         this.setState({ longTrip: !this.state.longTrip });
     }  
     
     shortTrip = () => {
         if (!this.state.shortTrip)
-             this.props.updateFilters({"days_lte":4})
+             this.props.updateFilters({_page:1,"days_lte":4})
         else
-            this.props.updateFilters({"days_lte":[]})
+            this.props.updateFilters({_page:1,"days_lte":[]})
         this.setState({ shortTrip: !this.state.shortTrip });
     }
     
     premiumOnly = () => {
         if (!this.state.premium)
-             this.props.updateFilters({"agency.isPremium":true})
+             this.props.updateFilters({_page:1,"agency.isPremium":true})
         else
-             this.props.updateFilters({"agency.isPremium":[]})
+             this.props.updateFilters({_page:1,"agency.isPremium":[]})
         this.setState({ premium: !this.state.premium });
     }
 
@@ -90,10 +90,13 @@ class Filter extends Component {
 
         else
             newInEgyptList.splice(index, 1);
-        this.props.updateFilters({'in-egypt':newInEgyptList})
+        this.props.updateFilters({_page:1,'in-egypt':newInEgyptList})
         this.setState({ inEgypt: newInEgyptList });
     }  
   
+    removeClass = ()=>{
+        document.body.classList.remove('ShowFilterActive');
+    }
     render() {
         return (
             <div className="right-filter">
@@ -172,6 +175,7 @@ class Filter extends Component {
                     <label className="checkbox" for="short-vacation"><input onClick={() => { this.shortTrip() }} type="checkbox" name="أجازة قصيرة" value="" id="short-vacation" /><span></span> أجازة قصيرة</label>
                     <label className="checkbox" for="long-youth"><input onClick={() => { this.longTrip() }} type="checkbox" name="أجازة طويلة" value="" id="long-youth" /><span></span> أجازة طويلة</label>
                 </div>
+                <button className="btn btn-filter"  onClick={()=>{this.removeClass()}}>تصفية النتائج</button>
             </div>
         );
     }
