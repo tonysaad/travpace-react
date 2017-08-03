@@ -1,0 +1,87 @@
+.DB{background-color:#FCFCFC;}
+.site-menubar{min-height:100vh;width:225px;display:inline-block;background:#30373E;box-shadow:1px 2px 6px 0 rgba(0,0,0,0.20);}
+.site-menubar .logo{padding:30px 30px 0;margin-bottom:40px;}
+.site-menubar .logo img{}
+.site-menubar .list{}
+.site-menubar .list .item{padding:0 25px;color:#C2CAD5;display:flex;justify-content:space-between;line-height:40px;cursor:pointer;align-items:center;}
+.site-menubar .list .item.active{background-color:rgba(229,235,241,0.1);border-left:5px solid #EA0F4D;}
+.site-menubar .list .item:hover,.site-menubar .list .item.active{color:#fff;background-color:rgba(229,235,241,0.1);}
+.site-menubar .list .item h3{}
+.site-menubar .list .item span{border-radius:13px;background:#C1C9D2;color:#45464A;line-height:20px;font-size:12px;width:32px;text-align:center;font-weight:600;}
+.site-menubar .list .item span.red{background:#EA0F4D;color:#fff;}
+.page{display:inline-block;vertical-align:top;width:calc(100% - 225px);}
+.page .DB-header{background:#fff;border-bottom:1px solid #E5EBF1;padding:15px 35px 15px 15px;display:flex;justify-content:space-between;align-items:center;}
+.page .DB-header .agency-data{}
+.page .DB-header .agency-data .pic{display:inline-block;border:1px solid #DBDDE0;background-color:#fff;vertical-align:middle;border:1px solid #DCDEE0;border-radius:2px;width:88px;height:66px;text-align:center;}
+.page .DB-header .agency-data .pic img{max-height:100%;margin:0 auto;display:block;}
+.page .DB-header .agency-data .conent{display:inline-block;vertical-align:middle;padding-right:10px;direction:ltr;}
+.page .DB-header .agency-data .conent h3{color:#000000;font-size:14px;font-weight:700;}
+.page .DB-header .agency-data .conent p{font-size:13px;color:#798694;font-weight:600;}
+.page .DB-header .agency-data .conent p a{color:#1EB10D;}
+.page .DB-header .agency-profile{direction:ltr;font-size:0;}
+.page .DB-header .agency-profile .pic{display:inline-block;vertical-align:middle;border-radius:50%;padding-right:10px;}
+.page .DB-header .agency-profile .pic img{}
+.page .DB-header .agency-profile .conent{display:inline-block;vertical-align:middle;text-align:left;}
+.page .DB-header .agency-profile .conent h4{font-size:14px;color:#000000;font-weight:700;line-height:1.1;}
+.page .DB-header .agency-profile .conent h4 span{color:#EA0F4D;font-size:12px;font-weight:600;}
+.page .DB-header .agency-profile .conent a{color:#798694;font-size:12px;font-weight:600;}
+.DB .select-sec label{color: #000000;font-size: 12px;font-weight: 700;}
+.DB .newDeal .full .select-sec select{width: 308px;}
+.DB .newDeal .select-sec.small select{width: 100px;}
+.DB .select-sec select{font-weight: 400;font-size: 12px;line-height: 40px;min-width: 0;padding-left: 35px;}
+.page .newDeal{padding: 25px 35px;}
+.page .newDeal>div{background: #FFFFFF;box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10);border-radius: 4px;max-width: 720px;}
+.page .newDeal .data{margin-bottom: 35px;}
+.page .newDeal .item_header{background-color: #262C32;color: #fff;line-height: 40px;padding: 0 30px;font-size: 14px;font-weight: 700;border-radius: 4px 4px 0 0;}
+.page .newDeal .data .content{}
+.page .newDeal .data .content .row{padding: 15px 30px;}
+.page .newDeal .data .content .row~.row{border-top:1px solid #E5EBF1;}
+.page .newDeal .data .content .full{ }
+.page .newDeal .data .content .full~.full{margin-top:15px;}
+.page .newDeal .data .content .select-sec{display: inline-block;}
+.page .newDeal .data .content .exclamation{display: inline-block;vertical-align: middle;width: 20px;margin-right: 10px;cursor: pointer;}
+.page .newDeal .data .content .exclamation img{display: block;}
+.page .newDeal .data .content .select-sec label{ }
+.page .newDeal .data .content .select-sec select{min-width: 0;}
+.page .newDeal .data .content .radio-btns{ }
+.page .newDeal .data .content .radio-btns h4{font-size: 12px;color: #000;font-weight: 700;line-height: 2;}
+.page .newDeal .data .content .radio-btns label{position: relative;font-size: 12px;color: #000000;line-height: 26px;padding-right: 25px;cursor: pointer;display: table;}
+.page .newDeal .data .content .radio-btns label input{display:none;}
+.page .newDeal .data .content .radio-btns .shape{position: relative;position: absolute;top: 5px;right: 0;width: 20px;height: 20px;border: 1px solid #C1C9D2;border-radius: 50%;-webkit-box-sizing: border-box;box-sizing: border-box;-webkit-transition-duration: 0.2s;-o-transition-duration: 0.2s;transition-duration: 0.2s;pointer-events: none;-webkit-transition: all .2s;-o-transition: all .2s;transition: all .2s;}
+.page .newDeal .data .content .radio-btns .shape::before{content: '';position: absolute;top: 0;right: 0;left: 0;bottom: 0;background-image: url('/img/icons/checkbox-selected.png');background-repeat: no-repeat;background-size: 12px;background-position: center;opacity: 0;-webkit-transition: all .2s;-moz-transition: all .2s;-o-transition: all .2s;transition: all .2s;}
+.page .newDeal .data .content .radio-btns input:checked~.shape{border-color: #1B5EC9;}
+.page .newDeal .data .content .radio-btns input:checked~.shape::before{opacity:1;}
+.page .newDeal .data .content .radio-btns .text{ }
+
+.page .newDeal .data .content .checkbox-btns.inline {max-width: 400px;}
+.page .newDeal .data .content .checkbox-btns.inline label{display: inline-block;width: 50%;vertical-align: middle;}
+.page .newDeal .data .content .checkbox-btns h4{font-size: 12px;color: #000;font-weight: 700;line-height: 2;}
+.page .newDeal .data .content .checkbox-btns label{position: relative;font-size: 12px;color: #000000;line-height: 20px;padding-right: 25px;cursor: pointer;}
+.page .newDeal .data .content .checkbox-btns label input{display:none;}
+.page .newDeal .data .content .checkbox-btns .shape{position: relative;position: absolute;top: 2px;right: 0;width: 16px;height: 16px;border: 1px solid #C1C9D2;border-radius: 0;-webkit-box-sizing: border-box;box-sizing: border-box;-webkit-transition-duration: 0.2s;-o-transition-duration: 0.2s;transition-duration: 0.2s;pointer-events: none;-webkit-transition: all .2s;-o-transition: all .2s;transition: all .2s;}
+.page .newDeal .data .content .checkbox-btns .shape::before{content: '';position: absolute;top: 0;right: 0;left: 0;bottom: 0;background-image: url('/img/icons/checkbox-selected.png');background-repeat: no-repeat;background-size: 10px;background-position: center;opacity: 0;-webkit-transition: all .2s;-moz-transition: all .2s;-o-transition: all .2s;transition: all .2s;}
+.page .newDeal .data .content .checkbox-btns input:checked~.shape{border-color: #1B5EC9;}
+.page .newDeal .data .content .checkbox-btns input:checked~.shape::before{opacity:1;}
+.page .newDeal .data .content .checkbox-btns .text{display: inline-block;}
+.page .newDeal .rooms{ }
+.page .newDeal .rooms .row{}
+.page .newDeal .rooms .room-type{padding: 15px 30px;}
+.page .newDeal .rooms .inline-width{display: inline-block;width:110px;}
+.page .newDeal .rooms .inline-width~.inline-width{margin-right:10px;}
+.page .newDeal .rooms .inline-width .select-sec{width:100%;}
+.page .newDeal .rooms .inline-width .select-sec select{width:100%;}
+.page .newDeal .rooms .select-sec label{font-weight: 500;}
+.page .newDeal .rooms .dates-prices{margin-top: 10px;background-color: rgba(193, 201, 210, 0.15);padding: 15px 30px;}
+.page .newDeal .rooms .dates-prices .labels{ }
+.page .newDeal .rooms .dates-prices .labels span{display: inline-block;width: 110px;font-size: 11px;font-weight: 500;}
+.page .newDeal .rooms .dates-prices .labels span~span{margin-right: 10px;}
+.page .newDeal .rooms .dates-prices .inputs{ }
+.page .newDeal .rooms .dates-prices input{display: inline-block;width: 110px;border: 1px solid #C1C9D2;height: 32px;line-height: 32px;border-radius: 4px;}
+.page .newDeal .rooms .dates-prices input~input{margin-right: 10px;}
+input[type="date"] {position: relative;direction:rtl;text-align:right;}
+input[type="date"]::-webkit-calendar-picker-indicator {color: transparent;background: none;z-index: 1;}
+input[type="date"]:before {content: '';background-image:url('/img/icons/date.png');background-repeat:no-repeat;background-size:contain;width: 12px;height: 14px;position: absolute;top: 8px;left: 6px;}
+input[type=date]::-webkit-clear-button,input[type=date]::-webkit-inner-spin-button{display: none;}
+input[type=date]::-webkit-datetime-edit-month-field {display:none;}
+input[type=date]::-webkit-datetime-edit-day-field {display:none;}
+input[type=date]::-webkit-datetime-edit-year-field {display:none;}

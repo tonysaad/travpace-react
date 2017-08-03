@@ -319,7 +319,7 @@ span {
         opacity: 1;
     }
     .right-filter{max-width: 100%;}
-    .btn-filter{display: block;}
+    .btn-filter{display: block !important;}
 }
 @media screen and (max-width:767px) {
     .HomePage .container {
@@ -856,7 +856,7 @@ span {
 .right-side {
     animation-name: slideInFromLeft;
     animation-timing-function: ease-in-out;
-    animation-delay: 1.4s;
+    animation-delay: .5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-duration: .6s;
@@ -1004,13 +1004,5 @@ span {
     -webkit-transform: rotate(360deg) scale(1);
             transform: rotate(360deg) scale(1); } 
 }
-.loader-btn{    display: block;
-    width: 100%;
-    text-align: center;
-    background-color: #1B5EC9;
-    color: #fff;
-    border-radius: 4px;
-    line-height: 35px;
-    font-weight: 700;
-    cursor: pointer;}
+.loader-btn{display: block;width: 100%;text-align: center;background-color: #1B5EC9;color: #fff;border-radius: 4px;line-height: 35px;font-weight: 600;cursor: pointer;font-size: 13px;}
 .loader-inner{text-align: center;}
