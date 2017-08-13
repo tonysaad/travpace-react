@@ -1,0 +1,58 @@
+/* .DB{background-color:#FCFCFC;}
+.site-menubar{min-height:100vh;width:225px;display:inline-block;background:#30373E;box-shadow:1px 2px 6px 0 rgba(0,0,0,0.20);}
+.site-menubar .logo{padding:30px 30px 0;margin-bottom:40px;}
+.site-menubar .logo img{}
+.site-menubar .list{}
+.site-menubar .list .item{padding:0 25px;color:#C2CAD5;display:flex;justify-content:space-between;line-height:40px;cursor:pointer;align-items:center;}
+.site-menubar .list .item.active{background-color:rgba(229,235,241,0.1);border-left:5px solid #EA0F4D;}
+.site-menubar .list .item:hover,.site-menubar .list .item.active{color:#fff;background-color:rgba(229,235,241,0.1);}
+.site-menubar .list .item h3{}
+.site-menubar .list .item span{border-radius:13px;background:#C1C9D2;color:#45464A;line-height:20px;font-size:12px;width:32px;text-align:center;font-weight:600;}
+.site-menubar .list .item span.red{background:#EA0F4D;color:#fff;}
+.page{display:inline-block;vertical-align:top;width:calc(100% - 225px);}
+.page .DB-header{background:#fff;border-bottom:1px solid #E5EBF1;padding:15px 35px 15px 15px;display:flex;justify-content:space-between;align-items:center;}
+.page .DB-header .agency-data{}
+.page .DB-header .agency-data .pic{display:inline-block;border:1px solid #DBDDE0;background-color:#fff;vertical-align:middle;border:1px solid #DCDEE0;border-radius:2px;width:88px;height:66px;text-align:center;}
+.page .DB-header .agency-data .pic img{max-height:100%;margin:0 auto;display:block;}
+.page .DB-header .agency-data .conent{display:inline-block;vertical-align:middle;padding-right:10px;direction:ltr;}
+.page .DB-header .agency-data .conent h3{color:#000000;font-size:14px;font-weight:700;}
+.page .DB-header .agency-data .conent p{font-size:13px;color:#798694;font-weight:600;}
+.page .DB-header .agency-data .conent p a{color:#1EB10D;}
+.page .DB-header .agency-profile{direction:ltr;font-size:0;}
+.page .DB-header .agency-profile .pic{display:inline-block;vertical-align:middle;border-radius:50%;padding-right:10px;}
+.page .DB-header .agency-profile .pic img{}
+.page .DB-header .agency-profile .conent{display:inline-block;vertical-align:middle;text-align:left;}
+.page .DB-header .agency-profile .conent h4{font-size:14px;color:#000000;font-weight:700;line-height:1.1;}
+.page .DB-header .agency-profile .conent h4 span{color:#EA0F4D;font-size:12px;font-weight:600;}
+.page .DB-header .agency-profile .conent a{color:#798694;font-size:12px;font-weight:600;}
+
+.page .newDeal{ }
+.page .newDeal .data{ }
+.page .newDeal .item_header{ }
+.page .newDeal .data .content{ }
+.page .newDeal .data .content .row{ }
+.page .newDeal .data .content .full{ }
+.page .newDeal .data .content .select-sec{ }
+.page .newDeal .data .content .select-sec label{ }
+.page .newDeal .data .content .select-sec select{ }
+.page .newDeal .data .content .radio-btns{ }
+.page .newDeal .data .content .radio-btns h4{ }
+.page .newDeal .data .content .radio-btns label{ }
+.page .newDeal .data .content .radio-btns label input{ }
+.page .newDeal .data .content .radio-btns input:checked~.shape{ }
+.page .newDeal .data .content .radio-btns .shape{ }
+.page .newDeal .data .content .radio-btns .shape::before{ content: ''; position: absolute; top: 0; right: 0; left: 0; bottom: 0; background-image: url('/img/icons/checkbox-selected.png'); background-repeat: no-repeat; background-size: 10px; background-position: center; opacity: 0; -webkit-transition: all .2s; -moz-transition: all .2s; -o-transition: all .2s; transition: all .2s; }
+.page .newDeal .data .content .checkbox-btns .text{ }
+.page .newDeal .data .content .checkbox-btns{ }
+.page .newDeal .data .content .checkbox-btns h4{ }
+.page .newDeal .data .content .checkbox-btns label{ }
+.page .newDeal .data .content .checkbox-btns label input{ }
+.page .newDeal .data .content .checkbox-btns input:checked~.shape{ }
+.page .newDeal .data .content .checkbox-btns .shape{ }
+.page .newDeal .data .content .checkbox-btns .shape::before{ content: ''; position: absolute; top: 0; right: 0; left: 0; bottom: 0; background-image: url('/img/icons/checkbox-selected.png'); background-repeat: no-repeat; background-size: 10px; background-position: center; opacity: 0; -webkit-transition: all .2s; -moz-transition: all .2s; -o-transition: all .2s; transition: all .2s; }
+.page .newDeal .data .content .checkbox-btns .text{ }
+.page .newDeal .rooms{ }
+.page .newDeal .rooms .row{ }
+.page .newDeal .rooms .room-type{ }
+.page .newDeal .rooms .inline-width{ }
+.page .newDeal .rooms .select-sec{ } */
