@@ -295,7 +295,7 @@ span {
         padding: 20px 0 0;
     }
     .HomePage .container .list-view {
-        margin: 0;
+        margin: 0 -15px;
     }
     .ShowFilterActive{overflow: hidden;}
     .HomePage .container .right-side{
@@ -334,6 +334,7 @@ span {
         padding: 0;
         margin-bottom: 30px;
     }
+    .HomePage .container .list-view{margin: 0;}
 }
 
 /*Right Sponsored*/
@@ -977,7 +978,7 @@ span {
 }
 
 .ball-clip-rotate div{
-        background-color: red;
+    background-color: red;
     width: 15px;
     height: 15px;
     border-radius: 100%;
