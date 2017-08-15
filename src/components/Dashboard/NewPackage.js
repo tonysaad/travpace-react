@@ -212,8 +212,8 @@ class NewPackage extends Component {
                                 <span className="bg"></span>
                             </label>
                             <div className="actions">
-                                <a href="#" className="publish">نشر عرض جديد</a>
-                                <a href="#" className="draft">حفظ بدون نشر</a>
+                                <input type="submit" className="publish" value="نشر عرض جديد"/>
+                                <input type="submit" className="draft" value="حفظ بدون نشر"/>
                             </div>
                         </div>
                     </div>
