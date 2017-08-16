@@ -19,6 +19,9 @@ class NewDeal extends Component {
         selected_themes :[],
         rooms: [],
         hotelName:'',
+        description:'',
+        featuredImage:'',
+        status:'',
         };
 
 
@@ -26,85 +29,45 @@ class NewDeal extends Component {
 
     handleChange = (event)=> {
         const target = event.target;
-        // if(target.name == "destination"){
-        //     this.setState({cityID: target.value});
-        // }
-        if(target.name == "hotel"){
-            this.setState({hotel: target.text});
-        }
-        if(target.name == "dealdays"){
+        if(target.name === "dealdays"){
             this.setState({days: target.value});
         }
-        if(target.name == "meal"){
+        if(target.name === "meal"){
             this.setState({selected_meal: target.value});
         }
-        if(target.name == "theme"){
-            this.setState({selected_themes: target.value});
+        if(target.name === "theme"){
+            this.setState({selected_themes: this.getselected('theme')});
         }
-        
+        if(target.name === "description"){
+            this.setState({description: target.value});
+        }
+        if(target.name === "featuredImage"){
+            console.log(target.files[0].name);
+            this.setState({featuredImage: target.files[0].name});
+        }
+        if(target.name === "publish"){
+            this.setState({status : "pending"});
+        }
+        if(target.name === "draft"){
+            this.setState({status : "draft"});
+        }
         
     }
     handleSubmit = (event)=>  {
-         event.preventDefault();
-        // this.sendFormData();
+        event.preventDefault();
         var data = {
-            title : 'عرض'+this.state.hotelName,
+            title : ' عرض '+this.state.hotelName,
+            content: this.state.description,
             hotel: this.state.hotelID,
             days: this.state.days,
-            meal_plan: this.getselected('meal')
+            meal_plan: this.state.selected_meal,
+            themesIDs: this.state.selected_themes,
+            status: this.state.status, 
+            featuredImg : this.state.featuredImage,
         }
         axios.post(`http://localhost/GIT/travpace/wp-json/v1/deals`,data);
-        // axios.get(`http://localhost/GIT/travpace/wp-json/v1/deals`).then(response => {
-        //     this.setState({cities : response.data['cities'], themes :response.data['themes'] , meals :response.data['meals'] });
-        // });
-        // $.ajax({
-        //     type: 'POST',
-        //     url: 'http://localhost/GIT/travpace/wp-json/v1/deals',
-        //     data: data
-        // })
-        // .done(function(data) {
-        //     self.clearForm()
-        // })
-        // .fail(function(jqXhr) {
-        //     console.log('failed to register');
-        // });
     }
     
-    // sendFormData = () =>{
-    //     let React = require('react');
-    //     let formData = {
-    //         city : ReactDOM.findDOMNode(this.refs.destination).value,
-    //         hotel : this.findDOMNode(this.refs.hotel).value,
-    //         days : this.findDOMNode(this.refs.dealdays).value,
-    //         roomCategory : this.findDOMNode(this.refs.roomCategory).value,
-    //         roomType : this.findDOMNode(this.refs.roomType).value,
-    //         roomView : this.findDOMNode(this.refs.roomView).value,
-    //     };
-    //     formData.meals = this.getslected('meal');
-    //     formData.themes = this.getslected('theme');
-
-    //     //send the form data.
-    //     let xmlhttp = new XMLHttpRequest();
-
-    //     xmlhttp.onreadystatechange = function (){
-    //         if(xmlhttp.readyState === 4){
-    //             let response = JSON.parse(xmlhttp.responseText);
-                
-    //             xmlhttp.open('POST','send',true);
-    //             xmlhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');
-    //             xmlhttp.send(this.requestBuildQueryString(formData));
-    //         }
-    //     }
-
-    // }
-    // requestBuildQueryString = (params) =>{
-    //     let queryString = [];
-    //     for(let property in params)
-    //         if(params.hasOwnProperty(property)){
-    //             queryString.push(encodeURIComponent(property) + '=' + encodeURIComponent(params[property]));
-    //         }
-    //     return queryString.join('&');
-    // }
     componentDidMount(){
         this.getCities(); 
     }
@@ -123,7 +86,7 @@ class NewDeal extends Component {
         let roomView = [];
         let hotelID = this.hotelID;
         this.state.hotels.map(function(hotel,i){
-            if(hotel.id == hotelID){
+            if(hotel.id === hotelID){
                 room_cats = hotel.room_category;
                 roomView = hotel.room_view;
             }
@@ -140,25 +103,27 @@ class NewDeal extends Component {
     getSelectedHotel = (e) => {
         const hotelID  = e.target.value;
         this.hotelID = hotelID;
-        this.setState({hotelID });
+        let index = e.nativeEvent.target.selectedIndex;
+        let hotelName = e.nativeEvent.target[index].text;
+        this.setState({hotelID : hotelID , hotelName : hotelName });
         this.getRooms();
     }
     getselected = (field) => {
         let fields = document.getElementsByName(field);
         let selectedFields = [];
         for(let i = 0; i < fields.length; i++){
-            if(fields[i.checked]===true){
+            if(fields[i].checked){
                 selectedFields.push(fields[i].value);
             }
         }
-        return selectedFields.join(', ');
+        return selectedFields;
     }
     render() {
         
         return (
 
             <div className="ndp">
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} enctype="multipart/form-data">
                     <div className="data dataDeal">
                         <div className="item_header">أضف بيانات العرض الفندقي</div>
                         <div className="content">
@@ -222,11 +187,11 @@ class NewDeal extends Component {
                                     <h4>نظام الوجبات</h4>
                                     {this.state.meals.map(function(meal,i){
                                         return <label htmlFor={'meal'+(i+1)}>
-                                        <input type="radio" name="meal" ref="meal" id={'meal'+(i+1)} value={meal.term_id}  />
+                                        <input type="radio" name="meal" id={'meal'+(i+1)} value={meal.term_id} onChange={this.handleChange} />
                                         <span className="shape"></span>
                                         <span className="text">{meal.name}</span>
                                     </label>
-                                    })}
+                                    },this)}
                                 </div>
                             </div>
                             <div className="row">
@@ -234,11 +199,11 @@ class NewDeal extends Component {
                                     <h4>العرض مناسب</h4>
                                     {this.state.themes.map(function(theme,i){
                                         return <label htmlFor={'suitable'+(i+1)}>
-                                        <input type="checkbox" name="theme" ref="theme"  id={'suitable'+(i+1)} value={theme.id} />
+                                        <input type="checkbox" name="theme"  id={'suitable'+(i+1)} value={theme.id} onChange={this.handleChange} />
                                         <span className="shape"></span>
                                         <span className="text">{theme.title}</span>
                                     </label>
-                                    })}
+                                    },this)}
                                 </div>
                             </div>
                         </div>
@@ -353,20 +318,21 @@ class NewDeal extends Component {
                             </div>
                         </div>
                     </div>
+                    
                     <div className="hotel-inculds">
                         <div className="item_header">نبذة عن العرض الفندقي</div>
                         <div className="content">
                             <div className="row">
                                 <div className="upload">
-                                    <input type="upload" />
+                                    <input type="file" name="featuredImage" placeholder="صورة العرض الفندقى الأفتتاحية" accept=".png,.jpg" onChange={this.handleChange}/>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="group-form">
                                     <h4>نبذة عن العرض</h4>
-                                    <textarea name=""></textarea>
+                                    <textarea name="description" onChange={this.handleChange}></textarea>
                                 </div>
-                                <div className="group-form">
+                                {/*<div className="group-form">
                                     <h4>العرض يشمل</h4>
                                     <div className="repeater">
                                         <input type="text" />
@@ -399,7 +365,7 @@ class NewDeal extends Component {
                                             <span>أضف بند جديد</span>
                                         </a>
                                     </div>
-                                </div>
+                                </div>*/}
                             </div>
                             <div className="row terms-row">
 
@@ -410,8 +376,8 @@ class NewDeal extends Component {
                                     <span className="bg"></span>
                                 </label>
                                 <div className="actions">
-                                    <input type="submit" className="publish" value="نشر عرض جديد"/>
-                                    <input type="submit" className="draft" value="حفظ بدون نشر"/>
+                                    <input type="submit" className="publish" value="نشر عرض جديد" name="publish" onClick={this.handleChange} />
+                                    <input type="submit" className="draft" value="حفظ بدون نشر" name="draft" onClick={this.handleChange}/>
                                 </div>
                             </div>
                         </div>
