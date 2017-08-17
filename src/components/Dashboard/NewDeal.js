@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from "axios";
 import './dashboard.css';
+import {bindAll} from 'lodash';
+import $ from 'jquery';
 
 class NewDeal extends Component {
     constructor(props) {
@@ -20,11 +22,11 @@ class NewDeal extends Component {
         rooms: [],
         hotelName:'',
         description:'',
-        featuredImage:'',
         status:'',
+        data_uri: '',
+        filename: '',
+        filetype: ''
         };
-
-
     }
 
     handleChange = (event)=> {
@@ -41,10 +43,10 @@ class NewDeal extends Component {
         if(target.name === "description"){
             this.setState({description: target.value});
         }
-        if(target.name === "featuredImage"){
-            console.log(target.files[0].name);
-            this.setState({featuredImage: target.files[0].name});
-        }
+        // if(target.name === "featuredImage"){
+        //     console.log(target.files);
+        //     this.setState({featuredImage: target.files[0].name});
+        // }
         if(target.name === "publish"){
             this.setState({status : "pending"});
         }
@@ -63,9 +65,34 @@ class NewDeal extends Component {
             meal_plan: this.state.selected_meal,
             themesIDs: this.state.selected_themes,
             status: this.state.status, 
-            featuredImg : this.state.featuredImage,
+            featuredImg_data_uri: this.state.data_uri,
+            featuredImg_filename: this.state.filename,
+            featuredImg_filetype: this.state.filetype,
         }
         axios.post(`http://localhost/GIT/travpace/wp-json/v1/deals`,data);
+        
+        // this.setState({
+        //     processing: true
+        // });
+
+        // const promise = $.ajax({
+        // url: 'http://localhost/GIT/travpace/wp-json/v1/deals',
+        // type: "POST",
+        // data: {
+        //     data_uri: this.state.data_uri,
+        //     filename: this.state.filename,
+        //     filetype: this.state.filetype
+        // },
+        // dataType: 'json'
+        // });
+
+        // promise.done = (data)=>{
+        // this.setState({
+        //     processing: false,
+        //     uploaded_uri: data.uri
+        // });
+        // }
+
     }
     
     componentDidMount(){
@@ -118,12 +145,44 @@ class NewDeal extends Component {
         }
         return selectedFields;
     }
+
+    handleFile = (e) => {
+        const reader = new FileReader();
+        const file = e.target.files[0];
+
+        reader.onload = (upload) => {
+            this.setState({
+                data_uri: upload.target.result,
+                filename: file.name,
+                filetype: file.type
+            });
+            };
+
+        reader.readAsDataURL(file);
+    }
+
     render() {
-        
+        let processing;
+        let uploaded;
+
+        if (this.state.uploaded_uri) {
+            uploaded = (
+                <div>
+                <h4>Image uploaded!</h4>
+                <img className='image-preview' src={this.state.uploaded_uri} />
+                <pre className='image-link-box'>{this.state.uploaded_uri}</pre>
+                </div>
+            );
+        }
+    
+        if (this.state.processing) {
+            processing = "Processing image, hang tight";
+        }
+
         return (
 
             <div className="ndp">
-                <form onSubmit={this.handleSubmit} enctype="multipart/form-data">
+                <form onSubmit={this.handleSubmit} encType="multipart/form-data">
                     <div className="data dataDeal">
                         <div className="item_header">أضف بيانات العرض الفندقي</div>
                         <div className="content">
@@ -324,7 +383,8 @@ class NewDeal extends Component {
                         <div className="content">
                             <div className="row">
                                 <div className="upload">
-                                    <input type="file" name="featuredImage" placeholder="صورة العرض الفندقى الأفتتاحية" accept=".png,.jpg" onChange={this.handleChange}/>
+                                    {/*<input type="file" name="featuredImage" placeholder="صورة العرض الفندقى الأفتتاحية" accept=".png,.jpg" onChange={this.handleChange}/>*/}
+                                    <input type="file" onChange={this.handleFile} />
                                 </div>
                             </div>
                             <div className="row">

@@ -128,7 +128,7 @@ input[type=date]::-webkit-datetime-edit-year-field {display:none;}
 .page .ndp .hotel-inculds .content{ }
 .page .ndp .hotel-inculds .row{padding: 15px 30px;}
 .page .ndp .hotel-inculds .upload{ }
-.page .ndp .hotel-inculds .upload input{ /* Rectangle 10 Copy: */background: #FFFFFF;border: 2px dashed #C1C9D2;border-radius: 2px;width: 135px;height: 100px;}
+.page .ndp .hotel-inculds .upload input[type="file"]{ /* Rectangle 10 Copy: */background: #FFFFFF;border: 2px dashed #C1C9D2;border-radius: 2px;width: 135px;height: 100px;}
 .page .ndp .hotel-inculds .group-form{ }
 .page .ndp .hotel-inculds .group-form~.group-form{margin-top: 30px;}
 .page .ndp .hotel-inculds .group-form h4{color: #000000;font-size: 12px;font-weight: 700;margin-bottom: 4px;}
