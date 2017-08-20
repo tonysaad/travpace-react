@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import axios from "axios";
 import './dashboard.css';
 import {bindAll} from 'lodash';
-import $ from 'jquery';
+import ImagesUploader from 'react-images-uploader';
+import 'react-images-uploader/styles.css';
+import 'react-images-uploader/font.css';
 
 class NewDeal extends Component {
     constructor(props) {
@@ -162,7 +164,7 @@ class NewDeal extends Component {
     }
 
     render() {
-        let processing;
+        /*let processing;
         let uploaded;
 
         if (this.state.uploaded_uri) {
@@ -177,7 +179,8 @@ class NewDeal extends Component {
     
         if (this.state.processing) {
             processing = "Processing image, hang tight";
-        }
+        }*/
+        
 
         return (
 
@@ -385,6 +388,17 @@ class NewDeal extends Component {
                                 <div className="upload">
                                     {/*<input type="file" name="featuredImage" placeholder="صورة العرض الفندقى الأفتتاحية" accept=".png,.jpg" onChange={this.handleChange}/>*/}
                                     <input type="file" onChange={this.handleFile} />
+                                    <ImagesUploader 
+                                        url="http://localhost:3000/multiple"
+                                        optimisticPreviews
+                                        multiple={false}
+                                        onLoadEnd={(err) => {
+                                            if (err) {
+                                                console.error(err);
+                                            }
+                                        }}
+                                        label="Upload an image"
+                                    />
                                 </div>
                             </div>
                             <div className="row">

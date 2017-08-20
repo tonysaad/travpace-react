@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "axios": "^0.16.2",
+    "cors-prefetch-middleware": "^1.0.0",
+    "images-upload-middleware": "^1.1.1",
     "jquery": "^3.2.1",
     "loaders.css": "^0.1.2",
     "react": "^15.5.4",
@@ -13,6 +15,7 @@
     "react-day-picker": "^6.1.0",
     "react-dom": "^15.5.4",
     "react-image-carousel": "^1.0.17",
+    "react-images-uploader": "^1.1.0",
     "react-loaders": "^2.5.0",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
