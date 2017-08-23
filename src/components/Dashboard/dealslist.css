@@ -1,0 +1,67 @@
+
+/* DEALS */
+.DealList{font-size: 0;}
+.DealList .ListContent{background: #FFFFFF;box-shadow: 0 4px 6px 0 rgba(0,0,0,0.20);display: inline-block;vertical-align: top;width: 460px;}
+.DealList .ListContent .Head{padding: 20px;text-align: left;border-bottom: 1px solid #DBDDE0;}
+.DealList .ListContent .Head a{background: #00A651;border-radius: 4px;display: inline-block;line-height: 44px;text-align: center;padding: 0 30px;color: #fff;font-size: 14px;font-weight: 700;}
+.DealList .ListContent .Head a:hover{ }
+.DealList .Listing{max-height: 1000px;overflow: overlay;direction: ltr;padding-right: 20px;}
+
+.DealList .Listing .item{display: flex;align-items: center;padding-top: 20px;padding-bottom: 15px;padding-right: 15px;transition: all .2s;position:relative;border-left: 0px solid #EA0F4D;direction: rtl;cursor: pointer;}
+.DealList .Listing .item:hover{background-color:#F4F7F9;border-left-width: 4px;}
+.DealList .Listing .item~.item{border-top: 1px solid #DBDDE0;}
+.DealList .Listing .item .pic{width: 110px;margin-left: 10px;}
+.DealList .Listing .item .pic img{display: block;}
+.DealList .Listing .item .content{ }
+.DealList .label{line-height: 16px;font-size: 10px;font-weight: 600;color: #fff;padding: 0px 6px;display: inline-block;}
+.DealList .label.published{background-color: #00A651;padding-right: 20px;background-image: url(/img/icons/check-white.png);background-size: 8px;background-repeat: no-repeat;background-position: calc(100% - 7px) center;}
+.DealList .label.no-yet{background-color: #C1C9D2;color: #43515D;}
+.DealList .label.pending{background-color: #FC9900;position: relative;margin-right: 22px;}
+.DealList .label.pending::before {content: "";position: absolute;top: 50%;right: -22px;background-image: url('/img/icons/loading-data-prices.png');background-repeat: no-repeat;background-position: center;animation: spin 2s linear infinite;width: 16px;height: 16px;background-size: contain;margin-top: -8px;}
+.DealList .Listing .item .content .deal-name{font-size: 12px;}
+.DealList .Listing .item .content .deal-name .starts{display: inline-block;height: auto;vertical-align: middle;margin-right: 5px;}
+.DealList .Listing .item .content .city{font-size: 12px;font-weight: 400;}
+.DealList .Listing .item .content .days{font-size: 12px;font-weight: 400;}
+.DealList .deal-details{display: inline-block;vertical-align: top;width: calc(100% - 460px);padding-right: 25px;padding-top: 30px;padding-bottom: 50px;padding: 30px 25px 50px;}
+.DealList .deal-details:after{content:'';display:block;clear: both;}
+.DealList .deal-details .deal-activity{display: flex;justify-content: flex-start;margin-bottom: 20px;}
+.DealList .deal-details .deal-activity .activity{background: #FFFFFF;box-shadow: 0 1px 4px 0 rgba(0,0,0,0.20);display: flex;padding: 0 15px 0 30px;align-items: center;border-right: 3px solid;height: 72px;min-width: 200px;}
+.DealList .deal-details .deal-activity .activity h3{font-size: 24px;font-weight: 700;margin-left: 15px;}
+.DealList .deal-details .deal-activity .activity .text{ }
+.DealList .deal-details .deal-activity .activity h4{font-size: 14px;color: #000;font-weight: 700;line-height: 1;}
+.DealList .deal-details .deal-activity .activity p{font-size: 12px;color: #000;font-weight: 400;}
+.DealList .deal-details .deal-activity .activity.activity-views{color:#798694;width: 250px;}
+.DealList .deal-details .deal-activity .activity.activity-likes{color:#EA0F4D;margin: 0 20px;}
+.DealList .deal-details .deal-activity .activity.activity-orders{color:#00A651;width: 220px;}
+.DealList .deal-details .deal-view{display: flex;align-items: center;}
+.DealList .deal-details .deal-view .pic{width: 340px;margin-left: 10px;position: relative;}
+.DealList .deal-details .deal-view .pic img{display: block;}
+.DealList .deal-details .deal-view .pic a{position: absolute;font-size: 12px;font-weight: 600;line-height: 30px;border-radius: 40px;background-color: rgba(0, 0, 0, 0.8);color: #fff;padding: 0 10px;bottom: 10px;right: 10px;}
+.DealList .deal-details .deal-view .content{width: calc(100% - 350px);}
+.DealList .deal-details .deal-view .content .starts{height: auto;margin: 6px 0 0;}
+.DealList .deal-details .deal-view .content .deal-name{font-size:20px;}
+.DealList .deal-details .deal-view .content hr{background: #DBDDE0;height: 2px;}
+.DealList .deal-details .deal-view .content .edit-deal{color: #003EEF;font-size: 12px;font-weight: 600;text-decoration: underline;display: inline-block;margin-top: 10px;}
+.DealList .deal-details .list-pirces{background: #FFFFFF;box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10);border-radius: 4px;margin-top: 22px;margin-bottom: 12px;}
+.DealList .deal-details .list-pirces .head{padding: 23px 21px;}
+.DealList .deal-details .list-pirces .head img{display: inline-block;vertical-align: middle;}
+.DealList .deal-details .list-pirces .head p{font-size: 13px;display: inline-block;vertical-align: middle;margin-right: 10px;}
+.DealList .deal-details .list-pirces .head p.child{ }
+.DealList .deal-details .list-pirces .head p.child span{display: block;font-size: 14px;font-weight: 700;line-height: 1;}
+.DealList .deal-details .list-pirces .table-list{background-color: rgba(193, 201, 210, 0.1);border-top: 1px solid #DBDDE0;border-bottom: 1px solid #DBDDE0;padding: 20px 40px;}
+.DealList .deal-details .list-pirces .item:last-child .table-list{border-bottom: none;}
+.DealList .deal-details .list-pirces .table-list table{table-layout: fixed;}
+.DealList .deal-details .list-pirces .table-list th{font-size: 11px;font-weight: 400;padding-bottom: 9px;}
+.DealList .deal-details .list-pirces .table-list th{padding-right: 0px;}
+.DealList .deal-details .list-pirces .table-list td{font-size: 12px;font-weight: 700;}
+.DealList .deal-details .list-pirces .table-list td:first-child{padding-right: 4px;}
+.DealList .deal-details .list-pirces .table-list td:first-child+td{padding-right: 4px;}
+.DealList .deal-details .list-pirces .table-list td:first-child+td+td{padding-right: 10px;}
+.DealList .deal-details .list-pirces .table-list tr:first-child th:first-child{width: 130px;}
+.DealList .deal-details .list-pirces .table-list tr:first-child th:first-child+th{/* width: 130px; */}
+.DealList .deal-details .list-pirces .table-list tr:first-child+tr~tr td{padding-top: 12px;}
+.DealList .deal-details .list-pirces .table-list .date{width: 110px;}
+.DealList .deal-details .list-pirces .table-list .date p{background-image: url('/img/icons/date.png');background-repeat: no-repeat;background-size: 12px;background-position: left center;}
+.DealList .deal-details .list-pirces .table-list .price{ }
+.DealList .deal-details .list-pirces .table-list .price p{ }
+.DealList .deal-details .link-del{color: #798694;font-size: 13px;font-weight: 600;float: left;}

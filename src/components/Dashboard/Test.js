@@ -48,6 +48,7 @@ class Test extends React.Component {
           </div>
         ))}
         <button type="button" onClick={this.handleAddShareholder} className="small">Add Shareholder</button>
+        <button type="submit" onClick={this.handleSubmit} className="small">submit</button>
         <button>Incorporate</button>
       </div>
     )
