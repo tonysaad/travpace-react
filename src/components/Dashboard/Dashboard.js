@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
+import axios from "axios";
 import NewDeal from './NewDeal';
 import NewPackage from './NewPackage';
 import Test from './Test';
 import AgencyAccount from './AgencyAccount';
 import ManageBookings from './ManageBookings';
+import SingleBooking from './SingleBooking';
+import DealsList from './DealsList';
 import './dashboard.css';
 
 class Dashboard extends Component {
+
+
     render() {
         return (
             <div className="DB">
@@ -60,6 +65,7 @@ class Dashboard extends Component {
                     <NewPackage/>
                     <AgencyAccount/>
                     <ManageBookings/>
+                    <DealsList/>
                 </div>
             </div>
         );

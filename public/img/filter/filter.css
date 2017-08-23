@@ -157,7 +157,7 @@
 
 .crowns {
     position: relative;
-    display: inline-block;
+    display: block;
     margin-right: 5px;
 }
 
