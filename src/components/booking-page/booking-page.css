@@ -77,7 +77,7 @@
 .CustomerData .entry-form { padding: 20px 0; } 
 .CustomerData .entry-form .form-group { margin-top: 20px; padding: 0 20px; } 
 .CustomerData .entry-form .form-group:first-child { margin-top: 0; } 
-.CustomerData .entry-form .form-group label { margin-bottom: 5px; } 
+.CustomerData .entry-form .form-group label { margin-bottom: 2px; font-size: 12px; } 
 .CustomerData .entry-form .form-group input,.CustomerData .entry-form .form-group textarea { background: #FFFFFF; border: 1px solid #C1C9D2; box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.15); border-radius: 4px; line-height: 20px; padding: 9px 15px; -webkit-appearance: none; margin: 0; width: 100%; max-width: 310px; } 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; } 
@@ -106,23 +106,43 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin
 .PriceTotla .content .price.free h4 { color: #00A651; font-size: 14px; font-weight: 700; display: block } 
 .PriceTotla .content .price h3 { font-size: 18px; font-weight: 700; display: inline-block; vertical-align: middle; } 
 .PriceTotla .content .price span { font-size: 12px; display: inline-block; vertical-align: middle; padding-right: 5px; } 
-.price-total .sticky { margin-top: 20px; } 
+.price-total .sticky { margin-top: 20px; width:auto !important; } 
 .price-total .sticky .PriceTotla { margin: 0; } 
 
 .dateRange { direction: ltr; outline: none; } 
 .dateRange .DayPicker-Day { border: 1px solid rgba(193, 201, 210, 0.5); border-radius: 2px; margin: 2px; padding: 0 7px; color: rgba(10, 10, 23, 0.5); font-size: 17px; line-height: 34px; font-weight: 700; outline: none; position: relative; } 
 .dateRange .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) { opacity: 1; background-color: #C1C9D2; color: #0a0a17; border-color: #C1C9D2; } 
 .dateRange .DayPicker-Month { border-collapse: separate; border-spacing: 5px; } 
-.dateRange .DayPicker-Day--outside { border: none; pointer-events: none;position: static;}
-.dateRange .DayPicker-Day--outside::before,.dateRange .DayPicker-Day--outside::after{display: none;}
+.dateRange .DayPicker-Day--outside { border: none; pointer-events: none; position: static; } 
+.dateRange .DayPicker-Day--outside::before,.dateRange .DayPicker-Day--outside::after { display: none; } 
 .dateRange .DayPicker-NavButton { background: rgba(193, 201, 210, 0.2); border-radius: 2px; width: 32px; height: 100px; border: none; top: 50%; position: relative; position: absolute; margin-top: -50px; outline: none; } 
 .dateRange .DayPicker-NavButton::before { content:''; background-image: url('/img/icons/arrow-right-grey.png'); position: absolute; left: 0; right: 0; top: 0; bottom: 0; background-size: 10px; background-position: center; background-repeat: no-repeat; } 
 .dateRange .DayPicker-NavButton--next::before { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); } 
 .dateRange .DayPicker-NavBar { position: static; } 
 .dateRange .DayPicker-Day[aria-selected="false"]+.DayPicker-Day[aria-selected="true"] { background-color: #00A651; color: #fff; border-color: #B8E986; } 
-.dateRange .DayPicker-Day::before { content:"مباع بالكامل"; position: absolute; font-size: 10px; width: 64px; line-height: 16px; background-color: #FB251A; border-radius: 2px; color: #fff; opacity: 0; z-index: 1; bottom: 100%; right: 100%; margin-right: -5px; margin-bottom: -5px;transition: .2s all ease-in-out;} 
+.dateRange .DayPicker-Day::before { content:"مباع بالكامل"; position: absolute; font-size: 10px; width: 64px; line-height: 16px; background-color: #FB251A; border-radius: 2px; color: #fff; opacity: 0; z-index: 1; bottom: 100%; right: 100%; margin-right: -5px; margin-bottom: -5px; transition: .2s all ease-in-out; } 
 .dateRange .DayPicker-Day:hover::before { opacity: 1; } 
-.dateRange .DayPicker-Day::after{content:'';position: absolute;top: 2px;left: 2px;width: 5px;height: 5px;border-radius: 50%;background: #FB251A;}
-.dateRange .DayPicker-Weekday{font-size: 11px;color: #798694;}
-.dateRange .DayPicker-Weekday abbr{text-decoration: none;}
-.dateRange .DayPicker-Caption{color:#45464A;font-size: 14px;}
+.dateRange .DayPicker-Day::after { content:''; position: absolute; top: 2px; left: 2px; width: 5px; height: 5px; border-radius: 50%; background: #FB251A; } 
+.dateRange .DayPicker-Weekday { font-size: 11px; color: #798694; } 
+.dateRange .DayPicker-Weekday abbr { text-decoration: none; } 
+.dateRange .DayPicker-Caption { color:#45464A; font-size: 14px; } 
+
+@media screen and (max-width:999px){
+ .price-total .sticky { position: static !important; } 
+ .booking-content { display: block; } 
+ .booking-form { margin: 0; } 
+ .PriceTotla { position: fixed; top:100%; width: auto; left: 0; right: 0; margin-top: -94px; z-index: 1; } 
+ .price-total > div > div { transform:none !important; } 
+ }
+@media screen and (max-width:767px){
+ .PackageInfo { display: block; } 
+ .PackageInfo > .pic { margin: 0; } 
+ .select-item-rooms { display: block; } 
+ .select-item-rooms .price,.select-item-rooms .select-sec { margin-right: 0; } 
+ .select-item-rooms .room-type,.select-item-rooms .sale-widget,.select-item-rooms .price { margin-bottom: 10px; } 
+ }
+ .facebookData{padding-top: 5px;}
+.facebookData button { background: #2F52A6; border-radius: 4px; color: #fff; line-height: 44px; padding: 0 65px 0 40px; background-image: url(/img/icons/facebook.png); background-repeat: no-repeat; background-position: calc(100% - 40px) center; margin: 0 auto; } 
+.facebookData+.or { position: relative; text-align: center; margin: 15px 25px 0; } 
+.facebookData+.or::before { content: ''; left: 0; right: 0; top: 50%; height: 1px; background: #E6E6E6; position: absolute; z-index: 0; } 
+.facebookData+.or span { font-size: 16px; font-weight: 900; background-color: #fff; position: relative; z-index: 1; padding: 0 10px; } 

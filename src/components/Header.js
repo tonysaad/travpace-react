@@ -5,7 +5,6 @@ import {
     //   Route,
     Link
 } from 'react-router-dom'
-import Anime from 'react-anime';
 
 class Header extends Component {
     constructor(props) {
@@ -28,7 +27,7 @@ class Header extends Component {
         this.setState({isActiveMain: !this.state.isActiveMain});
     }
     toggleClasses1 = ()=>{
-        document.body.classList.toggle('no-scroll', !this.state.isActiveSupport);
+        document.body.classList.toggle('active-support', !this.state.isActiveSupport);
         this.setState({isActiveSupport: !this.state.isActiveSupport});
     }
     render() {
@@ -36,11 +35,9 @@ class Header extends Component {
         let supportClasses = (this.state.isActiveSupport)? "nav-menu active" : "nav-menu";
         let supportClassesTog = (this.state.isActiveSupport)? "toggle-menu toggle-support active" : "toggle-menu toggle-support";
         return (
-            <div className={headerClasses}> 
+            <div className={headerClasses}>
                 <div onClick={()=>{this.toggleClasses()}} className="toggle-menu toggle-main"><i></i></div>
                 <div onClick={()=>{this.toggleClasses1()}} className={supportClassesTog}><i></i></div>
-      <Anime easing="easeOutElastic"
-           opacity={this.state.open ? [0, 1] : [1: 0]}>
                 <div className="header-top">
                     <div className="main-menu">
                         <ul>
@@ -88,10 +85,9 @@ class Header extends Component {
                         </ul>
                     </div>
                 </div>
-      </Anime>
                 <div className="header-bottom">
                     <div className="company-logo">
-                        <img src="/img/logo.jpg" alt="company-logo" />
+                        <Link to="/"><img src="/img/logo.jpg" alt="company-logo" /></Link>
                     </div>
 
                     <div className="account">

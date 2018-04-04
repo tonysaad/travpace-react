@@ -2,7 +2,7 @@
 .default-widget .pic { padding-top: 75%; background-position: center; background-repeat: no-repeat; background-size: cover; border-radius: 4px 4px 0 0; position: relative; } 
 .default-widget .pic img{display: none;}
 .default-widget .widget-hotel-content { padding: 10px 20px; font-size: 0; } 
-.default-widget .widget-hotel-content h2 { color: #000000; font-size: 16px; font-weight: 700; } 
+.default-widget .widget-hotel-content h2 { color: #000000; font-size: 16px; font-weight: 700;line-height: 1.4;}
 .default-widget .widget-hotel-content h2 .starts { display: inline-block; vertical-align: middle; height: 16px; margin-right: 5px; } 
 .default-widget .widget-hotel-content .premium-icon { font-size: 12px; display: table; font-weight: 400; margin-bottom: 5px; } 
 .widget-hotel-foot { border-top: 1px solid #E5EBF1; display: flex; justify-content: space-between; align-items: center; margin-top: 0px; padding: 0px 20px 5px; border-radius: 0 0 4px 4px; overflow: hidden; position: relative; z-index: 1; } 

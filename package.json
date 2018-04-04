@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.16.2",
+    "loaders.css": "^0.1.2",
     "react": "^15.5.4",
     "react-addons-css-transition-group": "^15.6.0",
     "react-addons-shallow-compare": "^15.6.0",
@@ -12,6 +13,7 @@
     "react-day-picker": "^6.2.1",
     "react-dom": "^15.5.4",
     "react-image-carousel": "^1.0.17",
+    "react-loaders": "^2.5.0",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "react-sticky-el": "^1.0.10",

@@ -34,7 +34,7 @@
 .single-page .extra-logos img { margin-left: 10px; } 
 .single-page .sponsored { margin: 0; } 
 .single-page .sponsored img { max-width: 200px; } 
-.trip-data iframe { width: 100%; height: 230px; margin-top: 30px; margin-bottom: 4px; } 
+.trip-data iframe { width: 100%; height: 230px; margin-top: 30px; margin-bottom: 4px;pointer-events: none;} 
 .trip-data p { font-size: 14px; font-weight: 300; line-height: 1.5; } 
 .trip-data h4 { margin-top: 10px; font-size: 14px; font-weight: 700; } 
 .trip-data .hotel-site{color: #009BD6;text-decoration: underline;font-size: 13px;display: table;margin-top: 10px;}
