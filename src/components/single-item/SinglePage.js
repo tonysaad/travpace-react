@@ -14,7 +14,7 @@ class SinglePage extends Component {
         this.setState({liked: !this.state.liked})
     }
     componentDidMount() {
-        axios.get(`http://thebackendcrew.com:8888/deals-and-packages/${this.props.params.id}`).then(response => {
+        axios.get(`http://thebackendcrew.com:8004/deals-and-packages/${this.props.params.id}`).then(response => {
             this.setState({
                 info: response.data
             })

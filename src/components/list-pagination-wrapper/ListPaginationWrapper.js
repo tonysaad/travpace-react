@@ -23,7 +23,7 @@ class ListPaginationWrapper extends Component {
       // popupData: '',
       popupIndex: -1
     };
-    this.url = "http://thebackendcrew.com:8888/deals-and-packages";
+    this.url = "http://thebackendcrew.com:8004/deals-and-packages";
   }
   updateState = (list, filters, totalCount, keepListItems) => {
     if (keepListItems) {
