@@ -7,9 +7,9 @@ class AgencyDetails extends Component {
             <div className="agency-details-div">
                 <p>كافة أسعار وتفاصيل الرحلة السياحية مقدمة من خلال </p>
                 <div className="agency-details">
-                    <div className="pic">
+                    {/* <div className="pic">
                         <img src={this.props.agency.logo.thumbnail} alt="hotel logo" />
-                    </div>
+                    </div> */}
                     <div className="details">
                         <h4>{this.props.agency.name}</h4>
                         {(this.props.agency.isPremium) ? <p className="premium-agency">Premium Agency</p> : null}

@@ -9,7 +9,7 @@
     "react-addons-shallow-compare": "^15.6.0",
     "react-anime": "^0.3.4",
     "react-dates": "^12.2.4",
-    "react-day-picker": "^6.1.0",
+    "react-day-picker": "^6.2.1",
     "react-dom": "^15.5.4",
     "react-image-carousel": "^1.0.17",
     "react-router": "^4.1.1",
