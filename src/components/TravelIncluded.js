@@ -6,11 +6,14 @@ class TravelIncluded extends Component {
     super(props);
   }
   mealPlan(plan){
-    switch(plan.toLowerCase()){
-      case "full board" :  return "شاملة الفطار و الغذاء و العشاء"; break;
-      case "bed and breakfast":  return "شاملة الفطار"; break; 
-      default: return "شاملة الفطار و العشاء"; break; 
+    if(plan){
+      switch(plan.toLowerCase()){
+        case "full board" :  return "شاملة الفطار و الغذاء و العشاء"; break;
+        case "bed and breakfast":  return "شاملة الفطار"; break; 
+        default: return "شاملة الفطار و العشاء"; break; 
+      }
     }
+    
   }
   render() {
     return (
